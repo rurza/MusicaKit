@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MusicaKit_Example' do
+  pod 'MusicaKit', :path => '../'
+
+  target 'MusicaKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
