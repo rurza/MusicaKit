@@ -1,0 +1,1242 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		009C79BE88C2F4C986644CD3E0B088C2 /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 8206EA4814DDD3A11C0BB63AE7270690 /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06697BBB6E6D73B5F021E6DACAC5DE45 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C4BDFC96318B7C6BCBA40D0CA2AFE1 /* JSONAPI.m */; };
+		0B1C5725C7BE03D622114275D6FD6EFA /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = E58A6B02B93052F05EC372B6DE9126AF /* JSONModelError.m */; };
+		0BA712448ED7FCAB67B06DFE1DE12933 /* MPIAsyncBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 312CEB6CA6EC129B287B11C25A9AEB58 /* MPIAsyncBlockOperation.m */; };
+		1007E13E9500C5F243A250F7D764DC68 /* NSURLRequest+Curl.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E6B80A8AC78C673CC81491788E51B6A /* NSURLRequest+Curl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2471E9A78068F132EA751FADFB8C8BCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51885CE84A807A13ECA21F0C0CDCB0DB /* Foundation.framework */; };
+		2AFB0AFA2138181E162CD00669D87FE3 /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC01C6096234B7E1BE5DA2E0C01BFBA /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36E344E5B627E04368ECC96338E17F26 /* JSONModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC114B5A4672F28A74535D4ADA7DC6C /* JSONModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		373901413FB555D89D8335A100FE1A95 /* MPIAppleMusicClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D482551CDF797AD3641D1332EFF1FB4 /* MPIAppleMusicClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		379D5892635FB6862FA9C3C7456531CE /* NSURLRequest+HttpMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FB5810B88DD3162AC6DE499284A45A /* NSURLRequest+HttpMethod.m */; };
+		37F6913EE3CD6EB8715086F0C9F6A823 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = BF655EFC0BBA3745B664EAC47601F63A /* JSONValueTransformer.m */; };
+		37FD169854FF4B397051998D611F152A /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BEE895AC18B2EE10301E62D08160256 /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40A6216FC50B4540584DA1C45F98F9FD /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5740DBCC140BB977C849736FC03ED8 /* JSONModelClassProperty.m */; };
+		46163E7C2C8A30626F671D19465F4F82 /* MPIAsyncBlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4287AA12EC0CAD873667AFF6C0F215D2 /* MPIAsyncBlockOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EB17293737C717D12298CFFE6A67514 /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 9470BC1898AA41E5BC40D370BFCFA04D /* JSONAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F52FA10C8D3108007B7FA439309D538 /* MPIAppleMusicRequestFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0604842CC4604A5B28776763E1CB10CF /* MPIAppleMusicRequestFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B29F3B2FFFCEB6C8AFD2E4327E285B /* MPIAppleMusicRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E4342780EE98D132CC28AD4B04E67 /* MPIAppleMusicRequestFactory.m */; };
+		57FE38F17C0EDD5CF73B2A084A17586E /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A32165362CC427B5B1FFF114554520B7 /* JSONHTTPClient.m */; };
+		58388F773008AF671CE67FE1C902E6CB /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3E9A2B376786EF649B87645E08325C /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B42D28F1F27D575007BC6CC /* MPIAppleMusicResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B42D28D1F27D575007BC6CC /* MPIAppleMusicResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B42D2901F27D575007BC6CC /* MPIAppleMusicResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B42D28E1F27D575007BC6CC /* MPIAppleMusicResponse.m */; };
+		5B42D2931F27D650007BC6CC /* MPIAppleMusicResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B42D2911F27D650007BC6CC /* MPIAppleMusicResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B42D2941F27D650007BC6CC /* MPIAppleMusicResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B42D2921F27D650007BC6CC /* MPIAppleMusicResource.m */; };
+		5B4924861F2A43B200CC57F9 /* MPIAppleMusicAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B4924841F2A43B200CC57F9 /* MPIAppleMusicAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B4924871F2A43B200CC57F9 /* MPIAppleMusicAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4924851F2A43B200CC57F9 /* MPIAppleMusicAlbum.m */; };
+		5B49248A1F2A44E700CC57F9 /* MPIAppleMusicArtwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B4924881F2A44E700CC57F9 /* MPIAppleMusicArtwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B49248B1F2A44E700CC57F9 /* MPIAppleMusicArtwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4924891F2A44E700CC57F9 /* MPIAppleMusicArtwork.m */; };
+		5B49248E1F2A465E00CC57F9 /* MPIAppleMusicPlayParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B49248C1F2A465E00CC57F9 /* MPIAppleMusicPlayParameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B49248F1F2A465E00CC57F9 /* MPIAppleMusicPlayParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B49248D1F2A465E00CC57F9 /* MPIAppleMusicPlayParameters.m */; };
+		5B4924921F2A477900CC57F9 /* MPIAppleMusicArtworkResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B4924901F2A477900CC57F9 /* MPIAppleMusicArtworkResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B4924931F2A477900CC57F9 /* MPIAppleMusicArtworkResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4924911F2A477900CC57F9 /* MPIAppleMusicArtworkResource.m */; };
+		5B4924971F2A49AD00CC57F9 /* MPIAppleMusicEditorialNotes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B4924951F2A49AD00CC57F9 /* MPIAppleMusicEditorialNotes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B4924981F2A49AD00CC57F9 /* MPIAppleMusicEditorialNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4924961F2A49AD00CC57F9 /* MPIAppleMusicEditorialNotes.m */; };
+		5B49249C1F2A4B3D00CC57F9 /* MPIAppleMusicAlbumResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B49249A1F2A4B3D00CC57F9 /* MPIAppleMusicAlbumResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B49249D1F2A4B3D00CC57F9 /* MPIAppleMusicAlbumResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B49249B1F2A4B3D00CC57F9 /* MPIAppleMusicAlbumResource.m */; };
+		5B86090D1F28ED30003997EB /* MPIAppleMusicStorefrontResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B86090B1F28ED30003997EB /* MPIAppleMusicStorefrontResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B86090E1F28ED30003997EB /* MPIAppleMusicStorefrontResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B86090C1F28ED30003997EB /* MPIAppleMusicStorefrontResource.m */; };
+		5B86090F1F28ED37003997EB /* MPIAppleMusicStorefront.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8609041F28EC55003997EB /* MPIAppleMusicStorefront.m */; };
+		5B8609101F28ED3C003997EB /* MPIAppleMusicStorefront.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B8609031F28EC55003997EB /* MPIAppleMusicStorefront.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B8609111F28EDA7003997EB /* MPIAppleMusicStorefrontResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B8609071F28ED04003997EB /* MPIAppleMusicStorefrontResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B8609121F28EDAD003997EB /* MPIAppleMusicStorefrontResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8609081F28ED04003997EB /* MPIAppleMusicStorefrontResponse.m */; };
+		5B8609181F292CEA003997EB /* MPIAppleMusicError.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B8609161F292CEA003997EB /* MPIAppleMusicError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B8609191F292CEA003997EB /* MPIAppleMusicError.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8609171F292CEA003997EB /* MPIAppleMusicError.m */; };
+		5BC240631F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC240611F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.h */; };
+		5BC240641F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC240621F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.m */; };
+		5BC240691F2A51AC00679F44 /* MPIAppleMusicRelationship.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC240671F2A51AC00679F44 /* MPIAppleMusicRelationship.h */; };
+		5BC2406A1F2A51AC00679F44 /* MPIAppleMusicRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC240681F2A51AC00679F44 /* MPIAppleMusicRelationship.m */; };
+		5BC7DB011F2A7C0C0006D46A /* MPIAppleMusicArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC7DAFF1F2A7C0C0006D46A /* MPIAppleMusicArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC7DB021F2A7C0C0006D46A /* MPIAppleMusicArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC7DB001F2A7C0C0006D46A /* MPIAppleMusicArtist.m */; };
+		5BC7DB051F2BBB7A0006D46A /* MPIAppleMusicAlbumRelationships.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC7DB031F2BBB7A0006D46A /* MPIAppleMusicAlbumRelationships.h */; };
+		5BC7DB061F2BBB7A0006D46A /* MPIAppleMusicAlbumRelationships.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC7DB041F2BBB7A0006D46A /* MPIAppleMusicAlbumRelationships.m */; };
+		5BC7DB091F2BBC9A0006D46A /* MPIAppleMusicArtistRelationship.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC7DB071F2BBC9A0006D46A /* MPIAppleMusicArtistRelationship.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC7DB0A1F2BBC9A0006D46A /* MPIAppleMusicArtistRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC7DB081F2BBC9A0006D46A /* MPIAppleMusicArtistRelationship.m */; };
+		5BC7DB0D1F2BBD6D0006D46A /* MPIAppleMusicArtistResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC7DB0B1F2BBD6D0006D46A /* MPIAppleMusicArtistResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC7DB0E1F2BBD6D0006D46A /* MPIAppleMusicArtistResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC7DB0C1F2BBD6D0006D46A /* MPIAppleMusicArtistResource.m */; };
+		5BC7DB121F2BBEE00006D46A /* MPIAppleMusicTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC7DB101F2BBEE00006D46A /* MPIAppleMusicTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC7DB131F2BBEE00006D46A /* MPIAppleMusicTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC7DB111F2BBEE00006D46A /* MPIAppleMusicTrack.m */; };
+		6C06F9307E2722620575106E285FA81C /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680960374FD2217C4BEC2C2BF2F6B8E4 /* JSONModel.framework */; };
+		6F5906B58272E07A0850248867562581 /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F9274F769FAD0C6150AAB14568D70DA /* JSONModelLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		770F408943774F1BECE83EDF54C184CA /* NSURLRequest+HttpMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 39EB7EA428586992093F57D5EEBC78EE /* NSURLRequest+HttpMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		771D05D7E880E70A30ED715D226159B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51885CE84A807A13ECA21F0C0CDCB0DB /* Foundation.framework */; };
+		772785574BC1059C2913576CBFF3AD17 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF8252D6CF289B801061729421BD23 /* JSONKeyMapper.m */; };
+		7F66E5779B29E0BC17D565DAD7CDEC1B /* JSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DAB0D29B784EF1FC8474642B4CD0B89 /* JSONHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8060025235D93F30A5F10B412DD0822E /* JSONModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FCCC19D9B7BFB426C4B00C8EF689CC /* JSONModel-dummy.m */; };
+		863D4CFC7FCA88BFA4E901B42AC82796 /* Pods-MusicaKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD93217CE76FEEA6AF717FF337D13F3F /* Pods-MusicaKit_Tests-dummy.m */; };
+		8DCEC8AC1AB2184E92C91A13578F89F7 /* Pods-MusicaKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 25CF8BCC3DD4D099BEA4F1D42CB4D098 /* Pods-MusicaKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98F19C682AC68E9D2E2052F709F42AF9 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C03CABA67BAA1A37B53F70091DE6C /* JSONModel+networking.m */; };
+		9905327EEDF48A3D652E8406E0B7E7C9 /* Pods-MusicaKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CF66CA83702269E50109D34AA37C1 /* Pods-MusicaKit_Example-dummy.m */; };
+		B39378F0A9C48254B50FC76A7DA70F97 /* MusicaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4322BA9F89AC5486AE4C38B115FEA757 /* MusicaKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B44323F286E4C8BAC906DD043B266F73 /* MusicaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F906510EACB9E30E97B7E3A44F2C5C8 /* MusicaKit-dummy.m */; };
+		CA138A66349EE943E8B4155273D05A08 /* Pods-MusicaKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ADA489960210E03BB7858771DB04DB8 /* Pods-MusicaKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4E9B3DE75C23D365E255B6212CB1CB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51885CE84A807A13ECA21F0C0CDCB0DB /* Foundation.framework */; };
+		D665F330737C52413EE22FFB6126A2BC /* MPIAppleMusicClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD2932757BDA0EAE69B05A740AB613 /* MPIAppleMusicClient.m */; };
+		DFA0B0C7EC02135911CACDAFD38BE715 /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = A50B295E7412F2E4B792DC5834705FFD /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E39D9A942BCE728467A42C478816966F /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 378AEACCB73A56874E59895469143734 /* JSONModel.m */; };
+		E3C47E114E924D2F331F9A3F122AEE5C /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 20DB64FB04FDC27111FD4F495B22D8DD /* JSONModel+networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E964127F1797223B024F06EA8F4938D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51885CE84A807A13ECA21F0C0CDCB0DB /* Foundation.framework */; };
+		F86EAAFEAC10CE2DD83B38104B34F1FD /* NSURLRequest+Curl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7BACD4C0EE2D7A3FEF8399B8A0C42F /* NSURLRequest+Curl.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87375D96FA18C409A87B48B11839A914 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC3688684BF42A20A8998F31DDA51A49;
+			remoteInfo = JSONModel;
+		};
+		8F1D646BE6138A683FD637C3781E2400 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8011FA2DFBA42F443E4B352E823E43A1;
+			remoteInfo = MusicaKit;
+		};
+		CC5587C2822C484DED490F47739C01E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC3688684BF42A20A8998F31DDA51A49;
+			remoteInfo = JSONModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0604842CC4604A5B28776763E1CB10CF /* MPIAppleMusicRequestFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicRequestFactory.h; sourceTree = "<group>"; };
+		08063953626BE9D3645789A5CF64FC6C /* Pods-MusicaKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicaKit_Example-resources.sh"; sourceTree = "<group>"; };
+		0A19FA996948A8CAA43BCB02B463AA5D /* Pods_MusicaKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicaKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B1F1412DB6E1CE774B74C1E215F90D7 /* JSONModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JSONModel.modulemap; sourceTree = "<group>"; };
+		0B7BACD4C0EE2D7A3FEF8399B8A0C42F /* NSURLRequest+Curl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+Curl.m"; sourceTree = "<group>"; };
+		1F9274F769FAD0C6150AAB14568D70DA /* JSONModelLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelLib.h; path = JSONModel/JSONModelLib.h; sourceTree = "<group>"; };
+		20DB64FB04FDC27111FD4F495B22D8DD /* JSONModel+networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JSONModel+networking.h"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.h"; sourceTree = "<group>"; };
+		25CF8BCC3DD4D099BEA4F1D42CB4D098 /* Pods-MusicaKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MusicaKit_Tests-umbrella.h"; sourceTree = "<group>"; };
+		2ADD2932757BDA0EAE69B05A740AB613 /* MPIAppleMusicClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicClient.m; sourceTree = "<group>"; };
+		2B82C4CE5BF611BF5CA1B9AEC4D7EB73 /* Pods-MusicaKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MusicaKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2D595A44BA05D6C22D13A407C0DEB896 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		312CEB6CA6EC129B287B11C25A9AEB58 /* MPIAsyncBlockOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MPIAsyncBlockOperation.m; sourceTree = "<group>"; };
+		378AEACCB73A56874E59895469143734 /* JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModel.m; path = JSONModel/JSONModel/JSONModel.m; sourceTree = "<group>"; };
+		39EB7EA428586992093F57D5EEBC78EE /* NSURLRequest+HttpMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+HttpMethod.h"; sourceTree = "<group>"; };
+		3ADA489960210E03BB7858771DB04DB8 /* Pods-MusicaKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MusicaKit_Example-umbrella.h"; sourceTree = "<group>"; };
+		4002EA17843CF5B395EF047A0D955998 /* Pods-MusicaKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicaKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4287AA12EC0CAD873667AFF6C0F215D2 /* MPIAsyncBlockOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MPIAsyncBlockOperation.h; sourceTree = "<group>"; };
+		428F2E314D79E2DC2DF82ABF54EAD429 /* JSONModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.xcconfig; sourceTree = "<group>"; };
+		4322BA9F89AC5486AE4C38B115FEA757 /* MusicaKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MusicaKit-umbrella.h"; sourceTree = "<group>"; };
+		4B6E4342780EE98D132CC28AD4B04E67 /* MPIAppleMusicRequestFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicRequestFactory.m; sourceTree = "<group>"; };
+		51885CE84A807A13ECA21F0C0CDCB0DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		58B0A2642EA527059C8B50421B6CFE3F /* Pods-MusicaKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicaKit_Tests-resources.sh"; sourceTree = "<group>"; };
+		5B42D28D1F27D575007BC6CC /* MPIAppleMusicResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicResponse.h; sourceTree = "<group>"; };
+		5B42D28E1F27D575007BC6CC /* MPIAppleMusicResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicResponse.m; sourceTree = "<group>"; };
+		5B42D2911F27D650007BC6CC /* MPIAppleMusicResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicResource.h; sourceTree = "<group>"; };
+		5B42D2921F27D650007BC6CC /* MPIAppleMusicResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicResource.m; sourceTree = "<group>"; };
+		5B4924841F2A43B200CC57F9 /* MPIAppleMusicAlbum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicAlbum.h; sourceTree = "<group>"; };
+		5B4924851F2A43B200CC57F9 /* MPIAppleMusicAlbum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicAlbum.m; sourceTree = "<group>"; };
+		5B4924881F2A44E700CC57F9 /* MPIAppleMusicArtwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicArtwork.h; sourceTree = "<group>"; };
+		5B4924891F2A44E700CC57F9 /* MPIAppleMusicArtwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicArtwork.m; sourceTree = "<group>"; };
+		5B49248C1F2A465E00CC57F9 /* MPIAppleMusicPlayParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicPlayParameters.h; sourceTree = "<group>"; };
+		5B49248D1F2A465E00CC57F9 /* MPIAppleMusicPlayParameters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicPlayParameters.m; sourceTree = "<group>"; };
+		5B4924901F2A477900CC57F9 /* MPIAppleMusicArtworkResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicArtworkResource.h; sourceTree = "<group>"; };
+		5B4924911F2A477900CC57F9 /* MPIAppleMusicArtworkResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicArtworkResource.m; sourceTree = "<group>"; };
+		5B4924951F2A49AD00CC57F9 /* MPIAppleMusicEditorialNotes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicEditorialNotes.h; sourceTree = "<group>"; };
+		5B4924961F2A49AD00CC57F9 /* MPIAppleMusicEditorialNotes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicEditorialNotes.m; sourceTree = "<group>"; };
+		5B49249A1F2A4B3D00CC57F9 /* MPIAppleMusicAlbumResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicAlbumResource.h; sourceTree = "<group>"; };
+		5B49249B1F2A4B3D00CC57F9 /* MPIAppleMusicAlbumResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicAlbumResource.m; sourceTree = "<group>"; };
+		5B8609031F28EC55003997EB /* MPIAppleMusicStorefront.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicStorefront.h; sourceTree = "<group>"; };
+		5B8609041F28EC55003997EB /* MPIAppleMusicStorefront.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicStorefront.m; sourceTree = "<group>"; };
+		5B8609071F28ED04003997EB /* MPIAppleMusicStorefrontResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicStorefrontResponse.h; sourceTree = "<group>"; };
+		5B8609081F28ED04003997EB /* MPIAppleMusicStorefrontResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicStorefrontResponse.m; sourceTree = "<group>"; };
+		5B86090B1F28ED30003997EB /* MPIAppleMusicStorefrontResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicStorefrontResource.h; sourceTree = "<group>"; };
+		5B86090C1F28ED30003997EB /* MPIAppleMusicStorefrontResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicStorefrontResource.m; sourceTree = "<group>"; };
+		5B8609161F292CEA003997EB /* MPIAppleMusicError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicError.h; sourceTree = "<group>"; };
+		5B8609171F292CEA003997EB /* MPIAppleMusicError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicError.m; sourceTree = "<group>"; };
+		5BC240611F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicAlbumResponse.h; sourceTree = "<group>"; };
+		5BC240621F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicAlbumResponse.m; sourceTree = "<group>"; };
+		5BC240671F2A51AC00679F44 /* MPIAppleMusicRelationship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicRelationship.h; sourceTree = "<group>"; };
+		5BC240681F2A51AC00679F44 /* MPIAppleMusicRelationship.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicRelationship.m; sourceTree = "<group>"; };
+		5BC7DAFF1F2A7C0C0006D46A /* MPIAppleMusicArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicArtist.h; sourceTree = "<group>"; };
+		5BC7DB001F2A7C0C0006D46A /* MPIAppleMusicArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicArtist.m; sourceTree = "<group>"; };
+		5BC7DB031F2BBB7A0006D46A /* MPIAppleMusicAlbumRelationships.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicAlbumRelationships.h; sourceTree = "<group>"; };
+		5BC7DB041F2BBB7A0006D46A /* MPIAppleMusicAlbumRelationships.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicAlbumRelationships.m; sourceTree = "<group>"; };
+		5BC7DB071F2BBC9A0006D46A /* MPIAppleMusicArtistRelationship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicArtistRelationship.h; sourceTree = "<group>"; };
+		5BC7DB081F2BBC9A0006D46A /* MPIAppleMusicArtistRelationship.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicArtistRelationship.m; sourceTree = "<group>"; };
+		5BC7DB0B1F2BBD6D0006D46A /* MPIAppleMusicArtistResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicArtistResource.h; sourceTree = "<group>"; };
+		5BC7DB0C1F2BBD6D0006D46A /* MPIAppleMusicArtistResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicArtistResource.m; sourceTree = "<group>"; };
+		5BC7DB101F2BBEE00006D46A /* MPIAppleMusicTrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicTrack.h; sourceTree = "<group>"; };
+		5BC7DB111F2BBEE00006D46A /* MPIAppleMusicTrack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicTrack.m; sourceTree = "<group>"; };
+		5DAB0D29B784EF1FC8474642B4CD0B89 /* JSONHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONHTTPClient.h; path = JSONModel/JSONModelNetworking/JSONHTTPClient.h; sourceTree = "<group>"; };
+		656AD195198DFBBA78E31443830E74D2 /* MusicaKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MusicaKit.modulemap; sourceTree = "<group>"; };
+		6582DA24BD4C7753946B16F89E4EFD1B /* MusicaKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MusicaKit.xcconfig; sourceTree = "<group>"; };
+		66B52345409CE3CF60FCDD4B0E8A9066 /* Pods-MusicaKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicaKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		680960374FD2217C4BEC2C2BF2F6B8E4 /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B10C0ABF569EE72005AB2E0D30C10E4 /* Pods-MusicaKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicaKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6D482551CDF797AD3641D1332EFF1FB4 /* MPIAppleMusicClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicClient.h; sourceTree = "<group>"; };
+		6FCDC1F5BD7D3D6BA4E266D20E63F26D /* Pods-MusicaKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicaKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		753523D1C0CAF358C5EB8BEB5380F06D /* Pods_MusicaKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicaKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81289A575B5D5C2FF3F2EDAAA34AC8AB /* Pods-MusicaKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MusicaKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8206EA4814DDD3A11C0BB63AE7270690 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelClassProperty.h; path = JSONModel/JSONModel/JSONModelClassProperty.h; sourceTree = "<group>"; };
+		82B8D6CBD6E24A0140FD48F97033A8AD /* Pods-MusicaKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicaKit_Example-frameworks.sh"; sourceTree = "<group>"; };
+		844EE3DFA58BC4A920E478EE4017CC32 /* JSONModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-prefix.pch"; sourceTree = "<group>"; };
+		87E3A9652C1D8FD8FC2A13C2CCA3BFFB /* MusicaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F3858A975667481603D3422CFB10E79 /* Pods-MusicaKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicaKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		8F906510EACB9E30E97B7E3A44F2C5C8 /* MusicaKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MusicaKit-dummy.m"; sourceTree = "<group>"; };
+		92EBEF99F5BE0E892EA2AD6008A4324D /* Pods-MusicaKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MusicaKit_Tests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9470BC1898AA41E5BC40D370BFCFA04D /* JSONAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONAPI.h; path = JSONModel/JSONModelNetworking/JSONAPI.h; sourceTree = "<group>"; };
+		9A9C03CABA67BAA1A37B53F70091DE6C /* JSONModel+networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "JSONModel+networking.m"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.m"; sourceTree = "<group>"; };
+		9BEE895AC18B2EE10301E62D08160256 /* JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = JSONModel/JSONModel/JSONModel.h; sourceTree = "<group>"; };
+		9E5CF66CA83702269E50109D34AA37C1 /* Pods-MusicaKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MusicaKit_Example-dummy.m"; sourceTree = "<group>"; };
+		9E6B80A8AC78C673CC81491788E51B6A /* NSURLRequest+Curl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+Curl.h"; sourceTree = "<group>"; };
+		A2FCCC19D9B7BFB426C4B00C8EF689CC /* JSONModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONModel-dummy.m"; sourceTree = "<group>"; };
+		A32165362CC427B5B1FFF114554520B7 /* JSONHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONHTTPClient.m; path = JSONModel/JSONModelNetworking/JSONHTTPClient.m; sourceTree = "<group>"; };
+		A50B295E7412F2E4B792DC5834705FFD /* JSONValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONValueTransformer.h; path = JSONModel/JSONModelTransformations/JSONValueTransformer.h; sourceTree = "<group>"; };
+		ADEF8A7F274958D8E905D9D5A07394A5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE5740DBCC140BB977C849736FC03ED8 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelClassProperty.m; path = JSONModel/JSONModel/JSONModelClassProperty.m; sourceTree = "<group>"; };
+		AECF8252D6CF289B801061729421BD23 /* JSONKeyMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
+		BC820A3308569DB7C00023C7F9A23F86 /* Pods-MusicaKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MusicaKit_Example.modulemap"; sourceTree = "<group>"; };
+		BF655EFC0BBA3745B664EAC47601F63A /* JSONValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
+		C00ACC5E23CA892ABE4DF456F4FF04CD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1E47E189E29F00889F85314CFD46627 /* MusicaKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MusicaKit-prefix.pch"; sourceTree = "<group>"; };
+		CBDBE6FB1958DFB929E5654419458DFE /* Pods-MusicaKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MusicaKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		CD93217CE76FEEA6AF717FF337D13F3F /* Pods-MusicaKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MusicaKit_Tests-dummy.m"; sourceTree = "<group>"; };
+		D1C4BDFC96318B7C6BCBA40D0CA2AFE1 /* JSONAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONAPI.m; path = JSONModel/JSONModelNetworking/JSONAPI.m; sourceTree = "<group>"; };
+		D4263606100D7C863A1432F3BBEC1FC5 /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E58A6B02B93052F05EC372B6DE9126AF /* JSONModelError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelError.m; path = JSONModel/JSONModel/JSONModelError.m; sourceTree = "<group>"; };
+		EEC01C6096234B7E1BE5DA2E0C01BFBA /* JSONModelError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelError.h; path = JSONModel/JSONModel/JSONModelError.h; sourceTree = "<group>"; };
+		EEC114B5A4672F28A74535D4ADA7DC6C /* JSONModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-umbrella.h"; sourceTree = "<group>"; };
+		F5C6668B171B4353BB922DE298D43B87 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6FB5810B88DD3162AC6DE499284A45A /* NSURLRequest+HttpMethod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+HttpMethod.m"; sourceTree = "<group>"; };
+		F9DA8DBB4281A19323DB1927CEF16942 /* Pods-MusicaKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MusicaKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FC3E9A2B376786EF649B87645E08325C /* JSONKeyMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONKeyMapper.h; path = JSONModel/JSONModelTransformations/JSONKeyMapper.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F13FDE48FAA625D37D626F69DA46819 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E9B3DE75C23D365E255B6212CB1CB7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34761827849608D760F1BAFD0FE7E637 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2471E9A78068F132EA751FADFB8C8BCC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51D000B3AFD9D5BA75A05F32ABEEB67D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E964127F1797223B024F06EA8F4938D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D720C4B01E2BE6FACADCF231B1735E19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				771D05D7E880E70A30ED715D226159B7 /* Foundation.framework in Frameworks */,
+				6C06F9307E2722620575106E285FA81C /* JSONModel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C5B446E181AC8585BD1A73A38BE842E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6D482551CDF797AD3641D1332EFF1FB4 /* MPIAppleMusicClient.h */,
+				2ADD2932757BDA0EAE69B05A740AB613 /* MPIAppleMusicClient.m */,
+				50514C4CE154E32FDFA15027227CD99C /* Categories */,
+				FE6E3BF8BB5A3A7CD119A19D4BFDB620 /* Helpers */,
+				DBE6CB3592B8D95494698F82211DEC85 /* Models */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3C876ECEF31E7BB0BBC15DF7F7C33089 /* Pods-MusicaKit_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C00ACC5E23CA892ABE4DF456F4FF04CD /* Info.plist */,
+				92EBEF99F5BE0E892EA2AD6008A4324D /* Pods-MusicaKit_Tests.modulemap */,
+				81289A575B5D5C2FF3F2EDAAA34AC8AB /* Pods-MusicaKit_Tests-acknowledgements.markdown */,
+				2B82C4CE5BF611BF5CA1B9AEC4D7EB73 /* Pods-MusicaKit_Tests-acknowledgements.plist */,
+				CD93217CE76FEEA6AF717FF337D13F3F /* Pods-MusicaKit_Tests-dummy.m */,
+				8F3858A975667481603D3422CFB10E79 /* Pods-MusicaKit_Tests-frameworks.sh */,
+				58B0A2642EA527059C8B50421B6CFE3F /* Pods-MusicaKit_Tests-resources.sh */,
+				25CF8BCC3DD4D099BEA4F1D42CB4D098 /* Pods-MusicaKit_Tests-umbrella.h */,
+				66B52345409CE3CF60FCDD4B0E8A9066 /* Pods-MusicaKit_Tests.debug.xcconfig */,
+				4002EA17843CF5B395EF047A0D955998 /* Pods-MusicaKit_Tests.release.xcconfig */,
+			);
+			name = "Pods-MusicaKit_Tests";
+			path = "Target Support Files/Pods-MusicaKit_Tests";
+			sourceTree = "<group>";
+		};
+		3FAA9833E5927EEC73E2CD00C0E03BF8 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				51885CE84A807A13ECA21F0C0CDCB0DB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		50514C4CE154E32FDFA15027227CD99C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B80A8AC78C673CC81491788E51B6A /* NSURLRequest+Curl.h */,
+				0B7BACD4C0EE2D7A3FEF8399B8A0C42F /* NSURLRequest+Curl.m */,
+				39EB7EA428586992093F57D5EEBC78EE /* NSURLRequest+HttpMethod.h */,
+				F6FB5810B88DD3162AC6DE499284A45A /* NSURLRequest+HttpMethod.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		5B4924941F2A484100CC57F9 /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+				5B4924881F2A44E700CC57F9 /* MPIAppleMusicArtwork.h */,
+				5B4924891F2A44E700CC57F9 /* MPIAppleMusicArtwork.m */,
+				5B4924901F2A477900CC57F9 /* MPIAppleMusicArtworkResource.h */,
+				5B4924911F2A477900CC57F9 /* MPIAppleMusicArtworkResource.m */,
+			);
+			path = Artwork;
+			sourceTree = "<group>";
+		};
+		5B4924991F2A4B2000CC57F9 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				5B4924841F2A43B200CC57F9 /* MPIAppleMusicAlbum.h */,
+				5B4924851F2A43B200CC57F9 /* MPIAppleMusicAlbum.m */,
+				5BC7DB031F2BBB7A0006D46A /* MPIAppleMusicAlbumRelationships.h */,
+				5BC7DB041F2BBB7A0006D46A /* MPIAppleMusicAlbumRelationships.m */,
+				5B49249A1F2A4B3D00CC57F9 /* MPIAppleMusicAlbumResource.h */,
+				5B49249B1F2A4B3D00CC57F9 /* MPIAppleMusicAlbumResource.m */,
+				5BC240611F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.h */,
+				5BC240621F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.m */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		5B8609021F28EC2B003997EB /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				5B8609161F292CEA003997EB /* MPIAppleMusicError.h */,
+				5B8609171F292CEA003997EB /* MPIAppleMusicError.m */,
+				5B42D28D1F27D575007BC6CC /* MPIAppleMusicResponse.h */,
+				5B42D28E1F27D575007BC6CC /* MPIAppleMusicResponse.m */,
+				5B42D2911F27D650007BC6CC /* MPIAppleMusicResource.h */,
+				5B42D2921F27D650007BC6CC /* MPIAppleMusicResource.m */,
+				5BC240671F2A51AC00679F44 /* MPIAppleMusicRelationship.h */,
+				5BC240681F2A51AC00679F44 /* MPIAppleMusicRelationship.m */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		5B8609151F292C78003997EB /* Storefront */ = {
+			isa = PBXGroup;
+			children = (
+				5B8609031F28EC55003997EB /* MPIAppleMusicStorefront.h */,
+				5B8609041F28EC55003997EB /* MPIAppleMusicStorefront.m */,
+				5B86090B1F28ED30003997EB /* MPIAppleMusicStorefrontResource.h */,
+				5B86090C1F28ED30003997EB /* MPIAppleMusicStorefrontResource.m */,
+				5B8609071F28ED04003997EB /* MPIAppleMusicStorefrontResponse.h */,
+				5B8609081F28ED04003997EB /* MPIAppleMusicStorefrontResponse.m */,
+			);
+			path = Storefront;
+			sourceTree = "<group>";
+		};
+		5BC240651F2A4FF500679F44 /* Play Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				5B49248C1F2A465E00CC57F9 /* MPIAppleMusicPlayParameters.h */,
+				5B49248D1F2A465E00CC57F9 /* MPIAppleMusicPlayParameters.m */,
+			);
+			path = "Play Parameters";
+			sourceTree = "<group>";
+		};
+		5BC240661F2A500700679F44 /* Editorial Notes */ = {
+			isa = PBXGroup;
+			children = (
+				5B4924951F2A49AD00CC57F9 /* MPIAppleMusicEditorialNotes.h */,
+				5B4924961F2A49AD00CC57F9 /* MPIAppleMusicEditorialNotes.m */,
+			);
+			path = "Editorial Notes";
+			sourceTree = "<group>";
+		};
+		5BC7DB0F1F2BBD730006D46A /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				5BC7DAFF1F2A7C0C0006D46A /* MPIAppleMusicArtist.h */,
+				5BC7DB001F2A7C0C0006D46A /* MPIAppleMusicArtist.m */,
+				5BC7DB071F2BBC9A0006D46A /* MPIAppleMusicArtistRelationship.h */,
+				5BC7DB081F2BBC9A0006D46A /* MPIAppleMusicArtistRelationship.m */,
+				5BC7DB0B1F2BBD6D0006D46A /* MPIAppleMusicArtistResource.h */,
+				5BC7DB0C1F2BBD6D0006D46A /* MPIAppleMusicArtistResource.m */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
+		754F8855F4FA9E24D8B2454F8960DEAF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D595A44BA05D6C22D13A407C0DEB896 /* Info.plist */,
+				656AD195198DFBBA78E31443830E74D2 /* MusicaKit.modulemap */,
+				6582DA24BD4C7753946B16F89E4EFD1B /* MusicaKit.xcconfig */,
+				8F906510EACB9E30E97B7E3A44F2C5C8 /* MusicaKit-dummy.m */,
+				C1E47E189E29F00889F85314CFD46627 /* MusicaKit-prefix.pch */,
+				4322BA9F89AC5486AE4C38B115FEA757 /* MusicaKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MusicaKit";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				A764153CCC81BBE0E3FBD96A963460A6 /* Development Pods */,
+				9DA539A1C7D2F3D5366C4C32BDFBADD6 /* Frameworks */,
+				E90606205BE2F0EAA285C9306DD5B1BD /* Pods */,
+				D0F62FDF22E379D55BAC6FF9AA628DD6 /* Products */,
+				91093534F14874B0481F1E114B54B702 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		91093534F14874B0481F1E114B54B702 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B73FE99F4AE8D0FABDB2E81BDDEB5EE6 /* Pods-MusicaKit_Example */,
+				3C876ECEF31E7BB0BBC15DF7F7C33089 /* Pods-MusicaKit_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9DA539A1C7D2F3D5366C4C32BDFBADD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				680960374FD2217C4BEC2C2BF2F6B8E4 /* JSONModel.framework */,
+				3FAA9833E5927EEC73E2CD00C0E03BF8 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A764153CCC81BBE0E3FBD96A963460A6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D66D18A8E5B075E1CBB22936247691BE /* MusicaKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		AAEC248A8E670C89A9FC23873EEA224B /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				9470BC1898AA41E5BC40D370BFCFA04D /* JSONAPI.h */,
+				D1C4BDFC96318B7C6BCBA40D0CA2AFE1 /* JSONAPI.m */,
+				5DAB0D29B784EF1FC8474642B4CD0B89 /* JSONHTTPClient.h */,
+				A32165362CC427B5B1FFF114554520B7 /* JSONHTTPClient.m */,
+				FC3E9A2B376786EF649B87645E08325C /* JSONKeyMapper.h */,
+				AECF8252D6CF289B801061729421BD23 /* JSONKeyMapper.m */,
+				9BEE895AC18B2EE10301E62D08160256 /* JSONModel.h */,
+				378AEACCB73A56874E59895469143734 /* JSONModel.m */,
+				20DB64FB04FDC27111FD4F495B22D8DD /* JSONModel+networking.h */,
+				9A9C03CABA67BAA1A37B53F70091DE6C /* JSONModel+networking.m */,
+				8206EA4814DDD3A11C0BB63AE7270690 /* JSONModelClassProperty.h */,
+				AE5740DBCC140BB977C849736FC03ED8 /* JSONModelClassProperty.m */,
+				EEC01C6096234B7E1BE5DA2E0C01BFBA /* JSONModelError.h */,
+				E58A6B02B93052F05EC372B6DE9126AF /* JSONModelError.m */,
+				1F9274F769FAD0C6150AAB14568D70DA /* JSONModelLib.h */,
+				A50B295E7412F2E4B792DC5834705FFD /* JSONValueTransformer.h */,
+				BF655EFC0BBA3745B664EAC47601F63A /* JSONValueTransformer.m */,
+				C12EA950A2275AD9E4C9E4EB3C3AC066 /* Support Files */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		B73FE99F4AE8D0FABDB2E81BDDEB5EE6 /* Pods-MusicaKit_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F5C6668B171B4353BB922DE298D43B87 /* Info.plist */,
+				BC820A3308569DB7C00023C7F9A23F86 /* Pods-MusicaKit_Example.modulemap */,
+				F9DA8DBB4281A19323DB1927CEF16942 /* Pods-MusicaKit_Example-acknowledgements.markdown */,
+				CBDBE6FB1958DFB929E5654419458DFE /* Pods-MusicaKit_Example-acknowledgements.plist */,
+				9E5CF66CA83702269E50109D34AA37C1 /* Pods-MusicaKit_Example-dummy.m */,
+				82B8D6CBD6E24A0140FD48F97033A8AD /* Pods-MusicaKit_Example-frameworks.sh */,
+				08063953626BE9D3645789A5CF64FC6C /* Pods-MusicaKit_Example-resources.sh */,
+				3ADA489960210E03BB7858771DB04DB8 /* Pods-MusicaKit_Example-umbrella.h */,
+				6FCDC1F5BD7D3D6BA4E266D20E63F26D /* Pods-MusicaKit_Example.debug.xcconfig */,
+				6B10C0ABF569EE72005AB2E0D30C10E4 /* Pods-MusicaKit_Example.release.xcconfig */,
+			);
+			name = "Pods-MusicaKit_Example";
+			path = "Target Support Files/Pods-MusicaKit_Example";
+			sourceTree = "<group>";
+		};
+		C12EA950A2275AD9E4C9E4EB3C3AC066 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADEF8A7F274958D8E905D9D5A07394A5 /* Info.plist */,
+				0B1F1412DB6E1CE774B74C1E215F90D7 /* JSONModel.modulemap */,
+				428F2E314D79E2DC2DF82ABF54EAD429 /* JSONModel.xcconfig */,
+				A2FCCC19D9B7BFB426C4B00C8EF689CC /* JSONModel-dummy.m */,
+				844EE3DFA58BC4A920E478EE4017CC32 /* JSONModel-prefix.pch */,
+				EEC114B5A4672F28A74535D4ADA7DC6C /* JSONModel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JSONModel";
+			sourceTree = "<group>";
+		};
+		D0F62FDF22E379D55BAC6FF9AA628DD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4263606100D7C863A1432F3BBEC1FC5 /* JSONModel.framework */,
+				87E3A9652C1D8FD8FC2A13C2CCA3BFFB /* MusicaKit.framework */,
+				0A19FA996948A8CAA43BCB02B463AA5D /* Pods_MusicaKit_Example.framework */,
+				753523D1C0CAF358C5EB8BEB5380F06D /* Pods_MusicaKit_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D66D18A8E5B075E1CBB22936247691BE /* MusicaKit */ = {
+			isa = PBXGroup;
+			children = (
+				F93B9CB09F59528A614D46C9408B988A /* MusicaKit */,
+				754F8855F4FA9E24D8B2454F8960DEAF /* Support Files */,
+			);
+			name = MusicaKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		DBE6CB3592B8D95494698F82211DEC85 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B8609021F28EC2B003997EB /* Generic */,
+				5B8609151F292C78003997EB /* Storefront */,
+				5B4924941F2A484100CC57F9 /* Artwork */,
+				5B4924991F2A4B2000CC57F9 /* Album */,
+				5BC240651F2A4FF500679F44 /* Play Parameters */,
+				5BC240661F2A500700679F44 /* Editorial Notes */,
+				5BC7DB0F1F2BBD730006D46A /* Artist */,
+				5BC7DB101F2BBEE00006D46A /* MPIAppleMusicTrack.h */,
+				5BC7DB111F2BBEE00006D46A /* MPIAppleMusicTrack.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E90606205BE2F0EAA285C9306DD5B1BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAEC248A8E670C89A9FC23873EEA224B /* JSONModel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F93B9CB09F59528A614D46C9408B988A /* MusicaKit */ = {
+			isa = PBXGroup;
+			children = (
+				0C5B446E181AC8585BD1A73A38BE842E /* Classes */,
+			);
+			path = MusicaKit;
+			sourceTree = "<group>";
+		};
+		FE6E3BF8BB5A3A7CD119A19D4BFDB620 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0604842CC4604A5B28776763E1CB10CF /* MPIAppleMusicRequestFactory.h */,
+				4B6E4342780EE98D132CC28AD4B04E67 /* MPIAppleMusicRequestFactory.m */,
+				4287AA12EC0CAD873667AFF6C0F215D2 /* MPIAsyncBlockOperation.h */,
+				312CEB6CA6EC129B287B11C25A9AEB58 /* MPIAsyncBlockOperation.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9F8ED547E31948DCAEBADF032D557204 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA138A66349EE943E8B4155273D05A08 /* Pods-MusicaKit_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF7227F5BD0440E9DF598DF26EC3891 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB17293737C717D12298CFFE6A67514 /* JSONAPI.h in Headers */,
+				7F66E5779B29E0BC17D565DAD7CDEC1B /* JSONHTTPClient.h in Headers */,
+				58388F773008AF671CE67FE1C902E6CB /* JSONKeyMapper.h in Headers */,
+				E3C47E114E924D2F331F9A3F122AEE5C /* JSONModel+networking.h in Headers */,
+				36E344E5B627E04368ECC96338E17F26 /* JSONModel-umbrella.h in Headers */,
+				37FD169854FF4B397051998D611F152A /* JSONModel.h in Headers */,
+				009C79BE88C2F4C986644CD3E0B088C2 /* JSONModelClassProperty.h in Headers */,
+				2AFB0AFA2138181E162CD00669D87FE3 /* JSONModelError.h in Headers */,
+				6F5906B58272E07A0850248867562581 /* JSONModelLib.h in Headers */,
+				DFA0B0C7EC02135911CACDAFD38BE715 /* JSONValueTransformer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA259D39EBCACD5F8D64DAB06AB94A85 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DCEC8AC1AB2184E92C91A13578F89F7 /* Pods-MusicaKit_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1234A42C61B0B761A74B1DD3EFA9EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B8609111F28EDA7003997EB /* MPIAppleMusicStorefrontResponse.h in Headers */,
+				373901413FB555D89D8335A100FE1A95 /* MPIAppleMusicClient.h in Headers */,
+				4F52FA10C8D3108007B7FA439309D538 /* MPIAppleMusicRequestFactory.h in Headers */,
+				5BC7DB0D1F2BBD6D0006D46A /* MPIAppleMusicArtistResource.h in Headers */,
+				5B49248A1F2A44E700CC57F9 /* MPIAppleMusicArtwork.h in Headers */,
+				5BC7DB051F2BBB7A0006D46A /* MPIAppleMusicAlbumRelationships.h in Headers */,
+				5B4924861F2A43B200CC57F9 /* MPIAppleMusicAlbum.h in Headers */,
+				5BC7DB121F2BBEE00006D46A /* MPIAppleMusicTrack.h in Headers */,
+				46163E7C2C8A30626F671D19465F4F82 /* MPIAsyncBlockOperation.h in Headers */,
+				5BC7DB011F2A7C0C0006D46A /* MPIAppleMusicArtist.h in Headers */,
+				B39378F0A9C48254B50FC76A7DA70F97 /* MusicaKit-umbrella.h in Headers */,
+				5B42D28F1F27D575007BC6CC /* MPIAppleMusicResponse.h in Headers */,
+				5B49249C1F2A4B3D00CC57F9 /* MPIAppleMusicAlbumResource.h in Headers */,
+				5B4924971F2A49AD00CC57F9 /* MPIAppleMusicEditorialNotes.h in Headers */,
+				1007E13E9500C5F243A250F7D764DC68 /* NSURLRequest+Curl.h in Headers */,
+				5B8609101F28ED3C003997EB /* MPIAppleMusicStorefront.h in Headers */,
+				5B86090D1F28ED30003997EB /* MPIAppleMusicStorefrontResource.h in Headers */,
+				5B8609181F292CEA003997EB /* MPIAppleMusicError.h in Headers */,
+				5B42D2931F27D650007BC6CC /* MPIAppleMusicResource.h in Headers */,
+				5B49248E1F2A465E00CC57F9 /* MPIAppleMusicPlayParameters.h in Headers */,
+				5BC240691F2A51AC00679F44 /* MPIAppleMusicRelationship.h in Headers */,
+				5BC240631F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.h in Headers */,
+				770F408943774F1BECE83EDF54C184CA /* NSURLRequest+HttpMethod.h in Headers */,
+				5B4924921F2A477900CC57F9 /* MPIAppleMusicArtworkResource.h in Headers */,
+				5BC7DB091F2BBC9A0006D46A /* MPIAppleMusicArtistRelationship.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8011FA2DFBA42F443E4B352E823E43A1 /* MusicaKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EB4BE430759550870BDEDCA3AC9E662 /* Build configuration list for PBXNativeTarget "MusicaKit" */;
+			buildPhases = (
+				6B54A287740DF0E074F711762C4BE5AF /* Sources */,
+				D720C4B01E2BE6FACADCF231B1735E19 /* Frameworks */,
+				EB1234A42C61B0B761A74B1DD3EFA9EE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6089D18FA3A34659535453FC8B5A68EF /* PBXTargetDependency */,
+			);
+			name = MusicaKit;
+			productName = MusicaKit;
+			productReference = 87E3A9652C1D8FD8FC2A13C2CCA3BFFB /* MusicaKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C6E9C3BA04446D59F3F005CC562CAFFB /* Pods-MusicaKit_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00DF66B861BCA976C6FA2CB98008B641 /* Build configuration list for PBXNativeTarget "Pods-MusicaKit_Tests" */;
+			buildPhases = (
+				C545B923A3A078CAD199369D3D742B1F /* Sources */,
+				51D000B3AFD9D5BA75A05F32ABEEB67D /* Frameworks */,
+				EA259D39EBCACD5F8D64DAB06AB94A85 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MusicaKit_Tests";
+			productName = "Pods-MusicaKit_Tests";
+			productReference = 753523D1C0CAF358C5EB8BEB5380F06D /* Pods_MusicaKit_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DC3688684BF42A20A8998F31DDA51A49 /* JSONModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4D16BF2938703D3A0079C402F5E75D8 /* Build configuration list for PBXNativeTarget "JSONModel" */;
+			buildPhases = (
+				CF525CD81327D7C4B38AF818D91B35A1 /* Sources */,
+				0F13FDE48FAA625D37D626F69DA46819 /* Frameworks */,
+				BBF7227F5BD0440E9DF598DF26EC3891 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSONModel;
+			productName = JSONModel;
+			productReference = D4263606100D7C863A1432F3BBEC1FC5 /* JSONModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E8B1FE9D75CF94A1258AC3E0B7D254AD /* Pods-MusicaKit_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E81F0960BF56AB202428BB605F30F87C /* Build configuration list for PBXNativeTarget "Pods-MusicaKit_Example" */;
+			buildPhases = (
+				99FC4B7AAAF8C34E4CCA5D10DEB1AC31 /* Sources */,
+				34761827849608D760F1BAFD0FE7E637 /* Frameworks */,
+				9F8ED547E31948DCAEBADF032D557204 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B9C78698882440E0FB81849FDDB5D43 /* PBXTargetDependency */,
+				A55E42794548859A70DCD0BEF977C758 /* PBXTargetDependency */,
+			);
+			name = "Pods-MusicaKit_Example";
+			productName = "Pods-MusicaKit_Example";
+			productReference = 0A19FA996948A8CAA43BCB02B463AA5D /* Pods_MusicaKit_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MPI;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = micropixels;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D0F62FDF22E379D55BAC6FF9AA628DD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC3688684BF42A20A8998F31DDA51A49 /* JSONModel */,
+				8011FA2DFBA42F443E4B352E823E43A1 /* MusicaKit */,
+				E8B1FE9D75CF94A1258AC3E0B7D254AD /* Pods-MusicaKit_Example */,
+				C6E9C3BA04446D59F3F005CC562CAFFB /* Pods-MusicaKit_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B54A287740DF0E074F711762C4BE5AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC7DB0E1F2BBD6D0006D46A /* MPIAppleMusicArtistResource.m in Sources */,
+				5B42D2901F27D575007BC6CC /* MPIAppleMusicResponse.m in Sources */,
+				5BC2406A1F2A51AC00679F44 /* MPIAppleMusicRelationship.m in Sources */,
+				5B4924871F2A43B200CC57F9 /* MPIAppleMusicAlbum.m in Sources */,
+				5B42D2941F27D650007BC6CC /* MPIAppleMusicResource.m in Sources */,
+				5B49249D1F2A4B3D00CC57F9 /* MPIAppleMusicAlbumResource.m in Sources */,
+				5B4924981F2A49AD00CC57F9 /* MPIAppleMusicEditorialNotes.m in Sources */,
+				5B86090E1F28ED30003997EB /* MPIAppleMusicStorefrontResource.m in Sources */,
+				5B4924931F2A477900CC57F9 /* MPIAppleMusicArtworkResource.m in Sources */,
+				5B49248B1F2A44E700CC57F9 /* MPIAppleMusicArtwork.m in Sources */,
+				5BC7DB021F2A7C0C0006D46A /* MPIAppleMusicArtist.m in Sources */,
+				5B86090F1F28ED37003997EB /* MPIAppleMusicStorefront.m in Sources */,
+				5B8609121F28EDAD003997EB /* MPIAppleMusicStorefrontResponse.m in Sources */,
+				D665F330737C52413EE22FFB6126A2BC /* MPIAppleMusicClient.m in Sources */,
+				5BC240641F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.m in Sources */,
+				5BC7DB0A1F2BBC9A0006D46A /* MPIAppleMusicArtistRelationship.m in Sources */,
+				50B29F3B2FFFCEB6C8AFD2E4327E285B /* MPIAppleMusicRequestFactory.m in Sources */,
+				5BC7DB131F2BBEE00006D46A /* MPIAppleMusicTrack.m in Sources */,
+				0BA712448ED7FCAB67B06DFE1DE12933 /* MPIAsyncBlockOperation.m in Sources */,
+				B44323F286E4C8BAC906DD043B266F73 /* MusicaKit-dummy.m in Sources */,
+				F86EAAFEAC10CE2DD83B38104B34F1FD /* NSURLRequest+Curl.m in Sources */,
+				5B8609191F292CEA003997EB /* MPIAppleMusicError.m in Sources */,
+				5BC7DB061F2BBB7A0006D46A /* MPIAppleMusicAlbumRelationships.m in Sources */,
+				5B49248F1F2A465E00CC57F9 /* MPIAppleMusicPlayParameters.m in Sources */,
+				379D5892635FB6862FA9C3C7456531CE /* NSURLRequest+HttpMethod.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99FC4B7AAAF8C34E4CCA5D10DEB1AC31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9905327EEDF48A3D652E8406E0B7E7C9 /* Pods-MusicaKit_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C545B923A3A078CAD199369D3D742B1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				863D4CFC7FCA88BFA4E901B42AC82796 /* Pods-MusicaKit_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF525CD81327D7C4B38AF818D91B35A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06697BBB6E6D73B5F021E6DACAC5DE45 /* JSONAPI.m in Sources */,
+				57FE38F17C0EDD5CF73B2A084A17586E /* JSONHTTPClient.m in Sources */,
+				772785574BC1059C2913576CBFF3AD17 /* JSONKeyMapper.m in Sources */,
+				98F19C682AC68E9D2E2052F709F42AF9 /* JSONModel+networking.m in Sources */,
+				8060025235D93F30A5F10B412DD0822E /* JSONModel-dummy.m in Sources */,
+				E39D9A942BCE728467A42C478816966F /* JSONModel.m in Sources */,
+				40A6216FC50B4540584DA1C45F98F9FD /* JSONModelClassProperty.m in Sources */,
+				0B1C5725C7BE03D622114275D6FD6EFA /* JSONModelError.m in Sources */,
+				37F6913EE3CD6EB8715086F0C9F6A823 /* JSONValueTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B9C78698882440E0FB81849FDDB5D43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			target = DC3688684BF42A20A8998F31DDA51A49 /* JSONModel */;
+			targetProxy = 87375D96FA18C409A87B48B11839A914 /* PBXContainerItemProxy */;
+		};
+		6089D18FA3A34659535453FC8B5A68EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			target = DC3688684BF42A20A8998F31DDA51A49 /* JSONModel */;
+			targetProxy = CC5587C2822C484DED490F47739C01E6 /* PBXContainerItemProxy */;
+		};
+		A55E42794548859A70DCD0BEF977C758 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MusicaKit;
+			target = 8011FA2DFBA42F443E4B352E823E43A1 /* MusicaKit */;
+			targetProxy = 8F1D646BE6138A683FD637C3781E2400 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A41B15D3AA834993ADDD808FA9D8764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		671AE9B469501ADD1BCDDC99604ED1A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4002EA17843CF5B395EF047A0D955998 /* Pods-MusicaKit_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MusicaKit_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MusicaKit_Tests/Pods-MusicaKit_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MusicaKit_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7B2D40BE72B915363DEA497DDD893DA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66B52345409CE3CF60FCDD4B0E8A9066 /* Pods-MusicaKit_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MusicaKit_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MusicaKit_Tests/Pods-MusicaKit_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MusicaKit_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7D144F724433A09597E3476A57631255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8276F1B34AE14B081E22F97080A3623C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 428F2E314D79E2DC2DF82ABF54EAD429 /* JSONModel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONModel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JSONModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9169B1EA538225A18AA0C3ED3941B5AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6582DA24BD4C7753946B16F89E4EFD1B /* MusicaKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MusicaKit/MusicaKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MusicaKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MusicaKit/MusicaKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MusicaKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C49F4EB5B4CAAFE6A340D9C6779E5225 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FCDC1F5BD7D3D6BA4E266D20E63F26D /* Pods-MusicaKit_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MusicaKit_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MusicaKit_Example/Pods-MusicaKit_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MusicaKit_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EC2C299C08EA8E2C54762807DA3367A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6582DA24BD4C7753946B16F89E4EFD1B /* MusicaKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MusicaKit/MusicaKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MusicaKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MusicaKit/MusicaKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MusicaKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F9CD9E00929E6549DBA87A5A63005E52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 428F2E314D79E2DC2DF82ABF54EAD429 /* JSONModel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONModel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JSONModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FAEE364C6ED69CFC9075822014419BD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B10C0ABF569EE72005AB2E0D30C10E4 /* Pods-MusicaKit_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MusicaKit_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MusicaKit_Example/Pods-MusicaKit_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MusicaKit_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00DF66B861BCA976C6FA2CB98008B641 /* Build configuration list for PBXNativeTarget "Pods-MusicaKit_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B2D40BE72B915363DEA497DDD893DA0 /* Debug */,
+				671AE9B469501ADD1BCDDC99604ED1A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D144F724433A09597E3476A57631255 /* Debug */,
+				1A41B15D3AA834993ADDD808FA9D8764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EB4BE430759550870BDEDCA3AC9E662 /* Build configuration list for PBXNativeTarget "MusicaKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2C299C08EA8E2C54762807DA3367A9 /* Debug */,
+				9169B1EA538225A18AA0C3ED3941B5AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E81F0960BF56AB202428BB605F30F87C /* Build configuration list for PBXNativeTarget "Pods-MusicaKit_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C49F4EB5B4CAAFE6A340D9C6779E5225 /* Debug */,
+				FAEE364C6ED69CFC9075822014419BD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4D16BF2938703D3A0079C402F5E75D8 /* Build configuration list for PBXNativeTarget "JSONModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9CD9E00929E6549DBA87A5A63005E52 /* Debug */,
+				8276F1B34AE14B081E22F97080A3623C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

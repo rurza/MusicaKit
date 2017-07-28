@@ -1,0 +1,19 @@
+PODS:
+  - JSONModel (1.7.0)
+  - MusicaKit (0.1.0):
+    - JSONModel
+
+DEPENDENCIES:
+  - MusicaKit (from `../`)
+
+EXTERNAL SOURCES:
+  MusicaKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  MusicaKit: f13d666449f09dc46c143eb79a30185e0ef1efa2
+
+PODFILE CHECKSUM: 741c1b25d753093ad84d1cb6f9688fe6250890dc
+
+COCOAPODS: 1.2.1

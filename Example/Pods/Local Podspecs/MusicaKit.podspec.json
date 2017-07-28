@@ -1,0 +1,28 @@
+{
+  "name": "MusicaKit",
+  "version": "0.1.0",
+  "summary": "Wrapper in Objective-C for connecting to Apple Music API",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/rurza/MusicaKit",
+  "license": {
+    "type": "Apache 2.0",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "micropixels": "adam@micropixels.pl"
+  },
+  "source": {
+    "git": "https://github.com/rurza/MusicaKit.git",
+    "tag": "0.1.0"
+  },
+  "social_media_url": "https://twitter.com/rurza",
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "MusicaKit/Classes/**/*",
+  "dependencies": {
+    "JSONModel": [
+
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+framework module MusicaKit {
+  umbrella header "MusicaKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
