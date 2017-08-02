@@ -1,6 +1,5 @@
 # MusicaKit
-<<<<<<< HEAD
-MusicaKit is a Apple Music web API client, written in Objective-C
+MusicaKit is a Apple Music web API client, written in Objective-C and using JSONModel as an only dependency.
 =======
 
 [![CI Status](http://img.shields.io/travis/rurza/MusicaKit.svg?style=flat)](https://travis-ci.org/rurza/MusicaKit)
@@ -30,4 +29,3 @@ rurza, adam@micropixels.pl
 ## License
 
 MusicaKit is available under the MIT license. See the LICENSE file for more info.
->>>>>>> Initial commit

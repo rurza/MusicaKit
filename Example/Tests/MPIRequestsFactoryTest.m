@@ -9,6 +9,8 @@
 #import <XCTest/XCTest.h>
 @import MusicaKit;
 
+static NSString *const kDevToken = @"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMyNzlIOTY2QTYifQ.eyJpc3MiOiJGNTg3NzJHNjdKIiwiaWF0IjoxNTAwOTE4MjI3LCJleHAiOjE1MDM1MTAyMjd9.xeSwB_rzRXCOZLRqwIF0M6yoTXvOP8SnIl6pvc-x7CGAfaB3hTImeFk7Cw1-hVMll26VyshJsZmG3UTfPT8oIw";
+
 @interface MPIRequestsFactoryTest : XCTestCase
 
 @end
@@ -17,7 +19,7 @@
 
 - (void)testCreateStorefrontRequest
 {
-    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetStorefrontRequestForRegionCode:@"PL" developerToken:@"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMyNzlIOTY2QTYifQ.eyJpc3MiOiJGNTg3NzJHNjdKIiwiaWF0IjoxNTAwOTE4MjI3LCJleHAiOjE1MDM1MTAyMjd9.xeSwB_rzRXCOZLRqwIF0M6yoTXvOP8SnIl6pvc-x7CGAfaB3hTImeFk7Cw1-hVMll26VyshJsZmG3UTfPT8oIw"];
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetStorefrontRequestForRegionCode:@"PL" developerToken:kDevToken];
     XCTAssertNotNil(request);
     XCTAssertNotNil(request.URL);
     NSDictionary *headers = request.allHTTPHeaderFields;
@@ -26,7 +28,7 @@
 
 - (void)testCreateGetAllStorefrontsRequest
 {
-    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetAllStorefrontsRequestsWithDeveloperToken:@"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMyNzlIOTY2QTYifQ.eyJpc3MiOiJGNTg3NzJHNjdKIiwiaWF0IjoxNTAwOTE4MjI3LCJleHAiOjE1MDM1MTAyMjd9.xeSwB_rzRXCOZLRqwIF0M6yoTXvOP8SnIl6pvc-x7CGAfaB3hTImeFk7Cw1-hVMll26VyshJsZmG3UTfPT8oIw"];
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetAllStorefrontsRequestsWithDeveloperToken:kDevToken];
     XCTAssertNotNil(request);
     XCTAssertNotNil(request.URL);
     NSDictionary *headers = request.allHTTPHeaderFields;
@@ -41,6 +43,13 @@
     NSDictionary *headers = request.allHTTPHeaderFields;
     XCTAssertNotNil([headers objectForKey:@"Authorization"]);
     XCTAssertNotNil([headers objectForKey:@"Music-User-Token"]);
+}
+
+- (void)testCreateGetAlbumsRequest
+{
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetAlbumsRequestWithAlbumIDs:@[@19842306] forStorefront:@"us" developerToken:kDevToken];
+    XCTAssertNotNil(request);
+    XCTAssertNotNil(request.URL);
 }
 
 

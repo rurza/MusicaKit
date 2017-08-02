@@ -13,7 +13,7 @@
 #import "MPIAppleMusicClient.h"
 #import "MPIAppleMusicRequestFactory.h"
 #import "MPIAppleMusicStorefrontResponse.h"
-#import "MPIAppleMusicAlbumResponse"
+#import "MPIAppleMusicAlbumResponse.h"
 
 
 FOUNDATION_EXPORT double MusicaKitVersionNumber;

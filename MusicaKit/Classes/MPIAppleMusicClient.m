@@ -10,6 +10,7 @@
 #import "MPIAppleMusicRequestFactory.h"
 #import "MPIAsyncBlockOperation.h"
 #import "MPIAppleMusicStorefrontResponse.h"
+#import "MPIAppleMusicAlbumResponse.h"
 
 #define MPIAssertDevToken NSAssert(self.developerToken.length > 0, @"Developer token must be set")
 
@@ -40,6 +41,7 @@
     return self;
 }
 
+#pragma mark Storefronts
 - (NSOperation *)getStorefrontForRegionWithCode:(NSString *)regionCode
                                     withHandler:(AppleMusicStorefrontRequestHandler)handler
 {
@@ -51,6 +53,24 @@
                 handler(error, nil);
             } else {
                 MPIAppleMusicStorefrontResponse *response = [self _parsedJSON:json toModelForClass:[MPIAppleMusicStorefrontResponse class] withError:&error];
+                handler(error, response);
+            }
+        }
+    }];
+}
+
+
+#pragma mark Albums
+- (NSOperation *)getAlbumsWithIDs:(NSArray<NSNumber *> *)ids forStorefront:(NSString *)storefront withHandler:(AppleMusicAlbumsRequestHandler)handler
+{
+    MPIAssertDevToken;
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetAlbumsRequestWithAlbumIDs:ids forStorefront:storefront developerToken:self.developerToken];
+    return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
+        if (handler) {
+            if (error) {
+                handler(error, nil);
+            } else {
+                MPIAppleMusicAlbumResponse *response = [self _parsedJSON:result toModelForClass:[MPIAppleMusicAlbumResponse class] withError:&error];
                 handler(error, response);
             }
         }

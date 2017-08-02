@@ -8,9 +8,11 @@
 
 #import <JSONModel/JSONModel.h>
 @class MPIAppleMusicArtistRelationship;
+@class MPIAppleMusicTrackRelationship;
 
 @interface MPIAppleMusicAlbumRelationships : JSONModel
 
 @property (nonatomic) MPIAppleMusicArtistRelationship   *artists;
+@property (nonatomic) MPIAppleMusicTrackRelationship    *tracks;
 
 @end

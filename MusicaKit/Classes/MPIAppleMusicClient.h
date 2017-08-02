@@ -8,9 +8,12 @@
 
 @import Foundation;
 @class MPIAppleMusicStorefrontResponse;
+@class MPIAppleMusicAlbumResponse;
 
 typedef void(^NetworkRequestHandler)(NSError *error, id result);
 typedef void(^AppleMusicStorefrontRequestHandler)(NSError *error, MPIAppleMusicStorefrontResponse *response);
+typedef void(^AppleMusicAlbumsRequestHandler)(NSError *error, MPIAppleMusicAlbumResponse *response);
+
 
 @interface MPIAppleMusicClient : NSObject
 
@@ -22,5 +25,9 @@ typedef void(^AppleMusicStorefrontRequestHandler)(NSError *error, MPIAppleMusicS
 + (instancetype)sharedClient;
 - (NSOperation *)getStorefrontForRegionWithCode:(NSString *)regionCode
                                     withHandler:(AppleMusicStorefrontRequestHandler)handler;
+
+
+//Albums
+- (NSOperation *)getAlbumsWithIDs:(NSArray<NSNumber *> *)ids forStorefront:(NSString *)storefront withHandler:(AppleMusicAlbumsRequestHandler)handler;
 
 @end
