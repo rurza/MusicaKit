@@ -6,8 +6,15 @@
 //  Copyright © 2017 micropixels. All rights reserved.
 //
 
-#import <MusicaKit/MusicaKit.h>
+#import "MPIAppleMusicResource.h"
+#import "MPIAppleMusicPlaylist.h"
+#import "MPIAppleMusicPlaylistRelationships.h"
+
+@protocol MPIAppleMusicPlaylistResource;
 
 @interface MPIAppleMusicPlaylistResource : MPIAppleMusicResource
+
+@property (nonatomic) MPIAppleMusicPlaylist                     *attributes;
+@property (nonatomic) MPIAppleMusicPlaylistRelationships        *relationships;
 
 @end

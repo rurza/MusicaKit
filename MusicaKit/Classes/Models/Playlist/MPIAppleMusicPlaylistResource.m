@@ -9,5 +9,5 @@
 #import "MPIAppleMusicPlaylistResource.h"
 
 @implementation MPIAppleMusicPlaylistResource
-
+@dynamic attributes, relationships;
 @end

@@ -9,6 +9,8 @@
 #import "MPIAppleMusicResource.h"
 #import "MPIAppleMusicCurator.h"
 
+@protocol MPIAppleMusicCuratorResource;
+
 @interface MPIAppleMusicCuratorResource : MPIAppleMusicResource
 @property (nonatomic) MPIAppleMusicCurator      *attributes;
 

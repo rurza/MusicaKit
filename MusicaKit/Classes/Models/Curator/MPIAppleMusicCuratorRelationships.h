@@ -7,7 +7,11 @@
 //
 
 #import <JSONModel/JSONModel.h>
+@class MPIAppleMusicPlaylistRelationship;
 
 @interface MPIAppleMusicCuratorRelationships : JSONModel
+
+#warning do zrobienia
+@property (nonatomic) MPIAppleMusicPlaylistRelationship             *playlists;
 
 @end

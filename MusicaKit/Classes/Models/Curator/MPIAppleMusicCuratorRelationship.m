@@ -9,5 +9,5 @@
 #import "MPIAppleMusicCuratorRelationship.h"
 
 @implementation MPIAppleMusicCuratorRelationship
-
+@dynamic data;
 @end

@@ -6,8 +6,9 @@
 //  Copyright © 2017 micropixels. All rights reserved.
 //
 
-#import <MusicaKit/MusicaKit.h>
+#import "MPIAppleMusicResponse.h"
+#import "MPIAppleMusicPlaylistResource.h"
 
 @interface MPIAppleMusicPlaylistResponse : MPIAppleMusicResponse
-
+@property (nonatomic) NSArray<MPIAppleMusicPlaylistResource>        *data;
 @end

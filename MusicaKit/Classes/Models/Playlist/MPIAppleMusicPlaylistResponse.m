@@ -9,5 +9,5 @@
 #import "MPIAppleMusicPlaylistResponse.h"
 
 @implementation MPIAppleMusicPlaylistResponse
-
+@dynamic data;
 @end

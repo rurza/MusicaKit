@@ -6,8 +6,13 @@
 //  Copyright © 2017 micropixels. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <JSONModel/JSONModel.h>
 
-@interface MPIAppleMusicRecommendationRelationships : MPIAppleMusicRelationships
+@interface MPIAppleMusicRecommendationRelationships : JSONModel
+
+#warning do zrobienia
+//contents
+
+//recommendations
 
 @end

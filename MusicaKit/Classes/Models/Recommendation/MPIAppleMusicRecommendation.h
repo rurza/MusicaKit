@@ -8,6 +8,9 @@
 
 #import <JSONModel/JSONModel.h>
 
+/**
+ Object that represents recommended resources for a user calculated using their selected preferences.
+ */
 @interface MPIAppleMusicRecommendation : JSONModel
 
 /**

@@ -9,5 +9,5 @@
 #import "MPIAppleMusicCuratorResponse.h"
 
 @implementation MPIAppleMusicCuratorResponse
-
+@dynamic data;
 @end
