@@ -7,12 +7,11 @@
 //
 
 #import <JSONModel/JSONModel.h>
+@class MPIAppleMusicRecommendationRelationship;
 
 @interface MPIAppleMusicRecommendationRelationships : JSONModel
 
-#warning do zrobienia
-//contents
-
-//recommendations
+@property (nonatomic) id<Optional>                                              contents;
+@property (nonatomic) MPIAppleMusicRecommendationRelationship<Optional>         *recommendations;
 
 @end

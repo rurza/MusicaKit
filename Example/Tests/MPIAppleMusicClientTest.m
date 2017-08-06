@@ -8,11 +8,12 @@
 
 #import <XCTest/XCTest.h>
 @import MusicaKit;
+@import StoreKit;
 
 static NSString *const kDevKey = @"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMyNzlIOTY2QTYifQ.eyJpc3MiOiJGNTg3NzJHNjdKIiwiaWF0IjoxNTAwOTE4MjI3LCJleHAiOjE1MDM1MTAyMjd9.xeSwB_rzRXCOZLRqwIF0M6yoTXvOP8SnIl6pvc-x7CGAfaB3hTImeFk7Cw1-hVMll26VyshJsZmG3UTfPT8oIw";
 
 @interface MPIAppleMusicClientTest : XCTestCase
-
+@property (nonatomic) SKCloudServiceController *serviceController;
 @end
 
 @implementation MPIAppleMusicClientTest
@@ -39,4 +40,12 @@ static NSString *const kDevKey = @"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6I
     [self waitForExpectations:@[expectation] timeout:15];
 }
 
+
+- (SKCloudServiceController *)serviceController
+{
+    if (!_serviceController) {
+        _serviceController = [[SKCloudServiceController alloc] init];
+    }
+    return _serviceController;
+}
 @end

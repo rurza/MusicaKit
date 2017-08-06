@@ -26,6 +26,8 @@
 		50B29F3B2FFFCEB6C8AFD2E4327E285B /* MPIAppleMusicRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E4342780EE98D132CC28AD4B04E67 /* MPIAppleMusicRequestFactory.m */; };
 		57FE38F17C0EDD5CF73B2A084A17586E /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A32165362CC427B5B1FFF114554520B7 /* JSONHTTPClient.m */; };
 		58388F773008AF671CE67FE1C902E6CB /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3E9A2B376786EF649B87645E08325C /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B0E95DC1F37218C0041CA8E /* MPIAppleMusicRecommendationRelationship.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B0E95DA1F37218C0041CA8E /* MPIAppleMusicRecommendationRelationship.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B0E95DD1F37218C0041CA8E /* MPIAppleMusicRecommendationRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E95DB1F37218C0041CA8E /* MPIAppleMusicRecommendationRelationship.m */; };
 		5B42D28F1F27D575007BC6CC /* MPIAppleMusicResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B42D28D1F27D575007BC6CC /* MPIAppleMusicResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B42D2901F27D575007BC6CC /* MPIAppleMusicResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B42D28E1F27D575007BC6CC /* MPIAppleMusicResponse.m */; };
 		5B42D2931F27D650007BC6CC /* MPIAppleMusicResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B42D2911F27D650007BC6CC /* MPIAppleMusicResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -172,6 +174,8 @@
 		4B6E4342780EE98D132CC28AD4B04E67 /* MPIAppleMusicRequestFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicRequestFactory.m; sourceTree = "<group>"; };
 		51885CE84A807A13ECA21F0C0CDCB0DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		58B0A2642EA527059C8B50421B6CFE3F /* Pods-MusicaKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicaKit_Tests-resources.sh"; sourceTree = "<group>"; };
+		5B0E95DA1F37218C0041CA8E /* MPIAppleMusicRecommendationRelationship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicRecommendationRelationship.h; sourceTree = "<group>"; };
+		5B0E95DB1F37218C0041CA8E /* MPIAppleMusicRecommendationRelationship.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicRecommendationRelationship.m; sourceTree = "<group>"; };
 		5B42D28D1F27D575007BC6CC /* MPIAppleMusicResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicResponse.h; sourceTree = "<group>"; };
 		5B42D28E1F27D575007BC6CC /* MPIAppleMusicResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicResponse.m; sourceTree = "<group>"; };
 		5B42D2911F27D650007BC6CC /* MPIAppleMusicResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicResource.h; sourceTree = "<group>"; };
@@ -502,6 +506,8 @@
 				5BC7DB381F325D160006D46A /* MPIAppleMusicRecommendationRelationships.m */,
 				5BC7DB3B1F3260470006D46A /* MPIAppleMusicRecommendationResponse.h */,
 				5BC7DB3C1F3260470006D46A /* MPIAppleMusicRecommendationResponse.m */,
+				5B0E95DA1F37218C0041CA8E /* MPIAppleMusicRecommendationRelationship.h */,
+				5B0E95DB1F37218C0041CA8E /* MPIAppleMusicRecommendationRelationship.m */,
 			);
 			path = Recommendation;
 			sourceTree = "<group>";
@@ -759,6 +765,7 @@
 				5B8609111F28EDA7003997EB /* MPIAppleMusicStorefrontResponse.h in Headers */,
 				5BC7DB271F2BD1970006D46A /* MPIAppleMusicArtistResponse.h in Headers */,
 				373901413FB555D89D8335A100FE1A95 /* MPIAppleMusicClient.h in Headers */,
+				5B0E95DC1F37218C0041CA8E /* MPIAppleMusicRecommendationRelationship.h in Headers */,
 				5BC7DB5B1F3266F00006D46A /* MPIAppleMusicPlaylistResource.h in Headers */,
 				4F52FA10C8D3108007B7FA439309D538 /* MPIAppleMusicRequestFactory.h in Headers */,
 				5BC7DB3D1F3260470006D46A /* MPIAppleMusicRecommendationResponse.h in Headers */,
@@ -916,6 +923,7 @@
 				5BC7DB311F3259570006D46A /* MPIAppleMusicRecommendation.m in Sources */,
 				5BC7DB641F3267C60006D46A /* MPIAppleMusicPlaylistRelationship.m in Sources */,
 				5BC7DB0E1F2BBD6D0006D46A /* MPIAppleMusicArtistResource.m in Sources */,
+				5B0E95DD1F37218C0041CA8E /* MPIAppleMusicRecommendationRelationship.m in Sources */,
 				5B42D2901F27D575007BC6CC /* MPIAppleMusicResponse.m in Sources */,
 				5BC2406A1F2A51AC00679F44 /* MPIAppleMusicRelationship.m in Sources */,
 				5BC7DB421F32616B0006D46A /* MPIAppleMusicCurator.m in Sources */,
