@@ -1,8 +1,10 @@
 # Work in progress
 
-## MusicaKit  
+## MusicaKit
 
 MusicaKit is a Apple Music web API client, written in Objective-C and using JSONModel as an only dependency. It will be used as a one of core frameworks in upcoming Apple Music Client with Last.fm scrobbler for iOS called Musica
+
+
 =======
 
 [![CI Status](http://img.shields.io/travis/rurza/MusicaKit.svg?style=flat)](https://travis-ci.org/rurza/MusicaKit)
