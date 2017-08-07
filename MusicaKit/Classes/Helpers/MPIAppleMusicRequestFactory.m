@@ -14,10 +14,15 @@ static NSString *const kMPIAppleMusicURLScheme =                    @"https";
 static NSString *const kMPIAppleMusicApiVersion =                   @"/v1";
 static NSString *const kMPIAppleMusicHost =                         @"api.music.apple.com";
 static NSString *const kMPIAppleMusicCatalogEndpoint =              @"/catalog";
+static NSString *const kMPIAppleMusicMeEndpoint =                   @"/me";
 static NSString *const kMPIAppleMusicUserTokenKey =                 @"Music-User-Token";
 static NSString *const kMPIAppleMusicAlbumsEndpoint =               @"/albums";
+static NSString *const kMPIAppleMusicRecommendationsEndpoint =      @"/recommendations";
+static NSString *const kMPIAppleMusicSearchEndpoint =               @"/search";
 
 #define MPI_ASSERT_COMPONENTS_URL NSAssert(components.URL, @"URL creation failed!")
+#define MPI_ASSERT_USER_TOKEN NSAssert(usrToken.length > 0, @"User token is nil or empty")
+#define MPI_ASSERT_DEVELOPER_TOKEN NSAssert(devToken.length > 0, @"Developer token is nil or empty")
 
 @interface MPIAppleMusicRequestFactory ()
 @property (nonatomic, class, readonly) NSURLComponents    *components;
@@ -42,11 +47,12 @@ static NSString *const kMPIAppleMusicAlbumsEndpoint =               @"/albums";
 + (NSURLRequest *)createGetUserStorefrontRequestWithUserToken:(NSString *)usrToken developerToken:(NSString *)devToken
 {
     NSURLComponents *components = self.components;
-    components.path = [NSString stringWithFormat:@"%@/me/storefront", kMPIAppleMusicApiVersion].lowercaseString;
+    components.path = [NSString stringWithFormat:@"%@%@/storefront", kMPIAppleMusicApiVersion, kMPIAppleMusicMeEndpoint].lowercaseString;
     MPI_ASSERT_COMPONENTS_URL;
     return [self authorizedRequestForURL:components.URL timeoutInterval:10 withDeveloperToken:devToken andUserToken:usrToken];
 }
 
+#pragma mark Album
 + (NSURLRequest *)createGetAlbumRequestWithAlbumID:(NSNumber *)id forStorefront:(NSString *)storefront developerToken:(NSString *)devToken
 {
     NSAssert([id isKindOfClass:[NSNumber class]], @"Wrong Album ID");
@@ -63,6 +69,63 @@ static NSString *const kMPIAppleMusicAlbumsEndpoint =               @"/albums";
     return [self authorizedRequestForURL:components.URL timeoutInterval:10 withDeveloperToken:devToken andUserToken:nil];
 }
 
+#pragma mark Recommendation
++ (NSURLRequest *)createGetRecommendationsRequestWithDeveloperToken:(NSString *)devToken andUserToken:(NSString *)usrToken
+{
+    MPI_ASSERT_USER_TOKEN;
+    NSURLComponents *components = self.components;
+    components.path = [NSString stringWithFormat:@"%@%@%@", kMPIAppleMusicApiVersion, kMPIAppleMusicMeEndpoint, kMPIAppleMusicRecommendationsEndpoint];
+    MPI_ASSERT_COMPONENTS_URL;
+    return [self authorizedRequestForURL:components.URL timeoutInterval:10 withDeveloperToken:devToken andUserToken:usrToken];
+}
+
+#pragma mark Search
++ (NSURLRequest *)createSearchRequestWithPhrase:(NSString *)phrase forStorefront:(NSString *)storefront localization:(NSString *)localization limit:(NSNumber *)limit offset:(NSNumber *)offset types:(MPIAppleMusicSearchType)searchTypes developerToken:(NSString *)devToken
+{
+    MPI_ASSERT_DEVELOPER_TOKEN;
+    NSURLComponents *components = self.components;
+    components.path = [NSString stringWithFormat:@"%@%@/%@%@", kMPIAppleMusicApiVersion, kMPIAppleMusicCatalogEndpoint, storefront, kMPIAppleMusicSearchEndpoint];
+    NSMutableArray *queryItems = [[NSMutableArray alloc] init];
+    NSURLQueryItem *searchPhrase = [NSURLQueryItem queryItemWithName:@"term" value:phrase];
+    [queryItems addObject:searchPhrase];
+    if (localization) {
+        [queryItems addObject:[NSURLQueryItem queryItemWithName:@"l" value:localization]];
+    }
+    if (limit) {
+        if (limit.integerValue > 25) {
+            limit = @25;
+        }
+        [queryItems addObject:[NSURLQueryItem queryItemWithName:@"limit" value:limit.stringValue]];
+    }
+    if (offset) {
+        [queryItems addObject:[NSURLQueryItem queryItemWithName:@"offset" value:offset.stringValue]];
+    }
+    if (searchTypes) {
+        NSMutableArray *searchTypesArray = [[NSMutableArray alloc] init];
+        if ((searchTypes & MPIAppleMusicSearchTypeAlbums) != 0) {
+            [searchTypesArray addObject:@"albums"];
+        }
+        if ((searchTypes & MPIAppleMusicSearchTypeArtists) != 0) {
+            [searchTypesArray addObject:@"artists"];
+        }
+        if ((searchTypes & MPIAppleMusicSearchTypePlaylists) != 0) {
+            [searchTypesArray addObject:@"playlists"];
+        }
+        if ((searchTypes & MPIAppleMusicSearchTypeTracks) != 0) {
+            [searchTypesArray addObject:@"songs"];
+        }
+        if ((searchTypes & MPIAppleMusicSearchTypeMusicVideos) != 0) {
+            [searchTypesArray addObject:@"music-videos"];
+        }
+        NSString *searchTypeString = [searchTypesArray componentsJoinedByString:@","];
+        if (searchTypeString) {
+            [queryItems addObject:[NSURLQueryItem queryItemWithName:@"types" value:searchTypeString]];
+        }
+    }
+    components.queryItems = queryItems;
+    MPI_ASSERT_COMPONENTS_URL;
+    return [self authorizedRequestForURL:components.URL timeoutInterval:15 withDeveloperToken:devToken andUserToken:nil];
+}
 
 #pragma mark – Priv
 + (NSURLComponents *)components
@@ -75,6 +138,7 @@ static NSString *const kMPIAppleMusicAlbumsEndpoint =               @"/albums";
 
 + (void)authorizeRequest:(NSMutableURLRequest *)request withDeveloperToken:(NSString *)devToken andUserToken:(NSString *)usrToken
 {
+    NSAssert(devToken.length > 0, @"Dev Token is nil or empty");
     [request addValue:[NSString stringWithFormat:@"Bearer %@", devToken] forHTTPHeaderField:@"Authorization"];
     if (usrToken.length > 0) {
         [request addValue:usrToken forHTTPHeaderField:kMPIAppleMusicUserTokenKey];

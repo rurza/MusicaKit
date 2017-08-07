@@ -7,6 +7,7 @@
 
 #import "MPIAppleMusicResource.h"
 
+
 @implementation MPIAppleMusicResource
 
 @end

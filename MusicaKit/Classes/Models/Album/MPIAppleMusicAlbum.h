@@ -51,7 +51,7 @@
 /**
  The URL for sharing an album in the iTunes Store.
  */
-@property (nonatomic) NSString                                  *url;
+@property (nonatomic) NSURL                                     *url;
 
 /**
  The names of the genres associated with this album.

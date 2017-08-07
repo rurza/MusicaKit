@@ -40,6 +40,18 @@ static NSString *const kDevKey = @"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6I
     [self waitForExpectations:@[expectation] timeout:15];
 }
 
+- (void)testSearchSomething
+{
+    XCTestExpectation *expectation = [self expectationWithDescription:@"SearchSmth"];
+    MPIAppleMusicClient *client = [MPIAppleMusicClient sharedClient];
+    client.developerToken = kDevKey;
+    [client search:@"Max Richter" inStorefront:@"pl" withLocalization:@"pl-pl" limit:nil offset:nil types:0 andHandler:^(NSError *error, MPIAppleMusicSearchResponse *response) {
+        
+    }];
+    [self waitForExpectations:@[expectation] timeout:15];
+
+}
+
 
 - (SKCloudServiceController *)serviceController
 {

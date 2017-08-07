@@ -14,12 +14,12 @@
 @interface MPIAppleMusicEditorialNotes : JSONModel
 
 /**
- Notes shown when the content is being prominently displayed.
+ (Optional) Notes shown when the content is being prominently displayed.
  */
-@property (nonatomic) NSString      *standard;
+@property (nonatomic) NSString<Optional>        *standard;
 
 /**
- Abbreviated notes shown in-line or when the content is shown alongside other content.
+ (Optional) Abbreviated notes shown in-line or when the content is shown alongside other content.
  */
-@property (nonatomic) NSString      *shortDescription;
+@property (nonatomic) NSString<Optional>        *shortDescription;
 @end

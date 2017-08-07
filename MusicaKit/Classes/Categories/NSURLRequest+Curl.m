@@ -19,7 +19,7 @@
     if (self.HTTPBody) {
         [command appendFormat:@" -d '%@'", [[NSString alloc] initWithData:self.HTTPBody encoding:NSUTF8StringEncoding]];
     }
-    [command appendFormat:@" %@", self.URL.absoluteString];
+    [command appendFormat:@" '%@'", self.URL.absoluteString];
     return command;
 }
 

@@ -7,12 +7,21 @@
 //
 
 @import Foundation;
+
 @class MPIAppleMusicStorefrontResponse;
 @class MPIAppleMusicAlbumResponse;
+@class MPIAppleMusicRecommendationResponse;
+@class MPIAppleMusicSearchResponse;
+
+#import "MPIAppleMusicSearchType.h"
+
 
 typedef void(^NetworkRequestHandler)(NSError *error, id result);
 typedef void(^AppleMusicStorefrontRequestHandler)(NSError *error, MPIAppleMusicStorefrontResponse *response);
 typedef void(^AppleMusicAlbumsRequestHandler)(NSError *error, MPIAppleMusicAlbumResponse *response);
+typedef void(^AppleMusicRecommendationsRequestHandler)(NSError *error, MPIAppleMusicRecommendationResponse *response);
+typedef void(^AppleMusicSearchRequestHandler)(NSError *error, MPIAppleMusicSearchResponse *response);
+
 
 
 @interface MPIAppleMusicClient : NSObject
@@ -28,6 +37,23 @@ typedef void(^AppleMusicAlbumsRequestHandler)(NSError *error, MPIAppleMusicAlbum
 
 
 //Albums
-- (NSOperation *)getAlbumsWithIDs:(NSArray<NSNumber *> *)ids forStorefront:(NSString *)storefront withHandler:(AppleMusicAlbumsRequestHandler)handler;
+- (NSOperation *)getAlbumsWithIDs:(NSArray<NSNumber *> *)ids
+                    forStorefront:(NSString *)storefront
+                      withHandler:(AppleMusicAlbumsRequestHandler)handler;
+
+- (NSOperation *)getAlbumWithID:(NSNumber *)storeId
+                  forStorefront:(NSString *)storefront
+                    withHandler:(AppleMusicAlbumsRequestHandler)handler;
+
+//Recommendations
+
+//Search
+- (NSOperation *)search:(NSString *)phrase
+           inStorefront:(NSString *)storefront
+       withLocalization:(NSString *)localization
+                  limit:(NSNumber *)limit
+                 offset:(NSNumber *)offset
+                  types:(MPIAppleMusicSearchType)types
+             andHandler:(AppleMusicSearchRequestHandler)handler;
 
 @end

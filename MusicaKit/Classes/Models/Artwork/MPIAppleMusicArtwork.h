@@ -20,29 +20,29 @@
 @property (nonatomic) NSString          *url;
 
 /**
- The average background color of the image.
+ (Optional) The average background color of the image.
  */
-@property (nonatomic) NSString          *bgColor;
+@property (nonatomic) NSString<Optional>          *bgColor;
 
 /**
- The primary text color that may be used if the background color is displayed.
+ (Optional) The primary text color that may be used if the background color is displayed.
  */
-@property (nonatomic) NSString          *textColor1;
+@property (nonatomic) NSString<Optional>          *textColor1;
 
 /**
- The secondary text color that may be used if the background color is displayed.
+ (Optional) The secondary text color that may be used if the background color is displayed.
  */
-@property (nonatomic) NSString          *textColor2;
+@property (nonatomic) NSString<Optional>          *textColor2;
 
 /**
- The tertiary text color that may be used if the background color is displayed.
+ (Optional) The tertiary text color that may be used if the background color is displayed.
  */
-@property (nonatomic) NSString          *textColor3;
+@property (nonatomic) NSString<Optional>          *textColor3;
 
 /**
- The final post-tertiary text color that maybe be used if the background color is displayed.
+ (Optional) The final post-tertiary text color that maybe be used if the background color is displayed.
  */
-@property (nonatomic) NSString          *textColor4;
+@property (nonatomic) NSString<Optional>          *textColor4;
 
 /**
  The maximum width available for the image.

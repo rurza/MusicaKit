@@ -11,7 +11,7 @@
 @interface MPIAppleMusicResponse : JSONModel
 
 @property (nonatomic) NSArray<Optional>                         *data;
-@property (nonatomic) NSDictionary<Optional>                    *results;
+@property (nonatomic) id<Optional>                              results;
 @property (nonatomic) NSArray<Optional, MPIAppleMusicError>     *errors;
 @property (nonatomic) NSDictionary<Optional>                    *meta;
 @property (nonatomic) NSString<Optional>                        *next;

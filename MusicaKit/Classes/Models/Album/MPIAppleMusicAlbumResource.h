@@ -7,14 +7,16 @@
 //
 
 #import "MPIAppleMusicResource.h"
-#import "MPIAppleMusicAlbum.h"
-#import "MPIAppleMusicAlbumRelationships.h"
+//#import "MPIAppleMusicAlbum.h"
+//#import "MPIAppleMusicAlbumRelationships.h"
+@class MPIAppleMusicAlbum;
+@class MPIAppleMusicAlbumRelationships;
 
 @protocol MPIAppleMusicAlbumResource;
 
 @interface MPIAppleMusicAlbumResource : MPIAppleMusicResource
 
-@property (nonatomic) MPIAppleMusicAlbum                            *attributes;
-@property (nonatomic) MPIAppleMusicAlbumRelationships               *relationships;
+@property (nonatomic) MPIAppleMusicAlbum<Optional>                      *attributes;
+@property (nonatomic) MPIAppleMusicAlbumRelationships<Optional>         *relationships;
 
 @end

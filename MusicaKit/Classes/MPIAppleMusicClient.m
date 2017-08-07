@@ -11,8 +11,13 @@
 #import "MPIAsyncBlockOperation.h"
 #import "MPIAppleMusicStorefrontResponse.h"
 #import "MPIAppleMusicAlbumResponse.h"
+#import "MPIAppleMusicRecommendationResponse.h"
+#import "MPIAppleMusicSearchResponse.h"
 
-#define MPIAssertDevToken NSAssert(self.developerToken.length > 0, @"Developer token must be set")
+#define MPI_ASSERT_DEV_TOKEN NSAssert(self.developerToken.length > 0, @"Developer token must be set")
+#define MPI_ASSERT_USR_TOKEN NSAssert(self.userToken.length > 0, @"User token must be set")
+#define MPI_ASSERT_STOREFRONT NSAssert(storefront.length > 0, @"Storefront must be set")
+
 
 @interface MPIAppleMusicClient ()
 @property (nonatomic) NSOperationQueue  *operationQueue;
@@ -45,7 +50,7 @@
 - (NSOperation *)getStorefrontForRegionWithCode:(NSString *)regionCode
                                     withHandler:(AppleMusicStorefrontRequestHandler)handler
 {
-    MPIAssertDevToken;
+    MPI_ASSERT_DEV_TOKEN;
     NSURLRequest *request = [MPIAppleMusicRequestFactory createGetStorefrontRequestForRegionCode:regionCode developerToken:self.developerToken];
     return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id json) {
         if (handler) {
@@ -63,7 +68,8 @@
 #pragma mark Albums
 - (NSOperation *)getAlbumsWithIDs:(NSArray<NSNumber *> *)ids forStorefront:(NSString *)storefront withHandler:(AppleMusicAlbumsRequestHandler)handler
 {
-    MPIAssertDevToken;
+    MPI_ASSERT_DEV_TOKEN;
+    MPI_ASSERT_STOREFRONT;
     NSURLRequest *request = [MPIAppleMusicRequestFactory createGetAlbumsRequestWithAlbumIDs:ids forStorefront:storefront developerToken:self.developerToken];
     return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
         if (handler) {
@@ -74,6 +80,56 @@
                 handler(error, response);
             }
         }
+    }];
+}
+
+- (NSOperation *)getAlbumWithID:(NSNumber *)storeId
+                  forStorefront:(NSString *)storefront
+                    withHandler:(AppleMusicAlbumsRequestHandler)handler
+{
+    return [self getAlbumsWithIDs:@[storeId] forStorefront:storefront withHandler:handler];
+}
+
+#pragma mark Search
+- (NSOperation *)search:(NSString *)phrase
+           inStorefront:(NSString *)storefront
+       withLocalization:(NSString *)localization
+                  limit:(NSNumber *)limit
+                 offset:(NSNumber *)offset
+                  types:(MPIAppleMusicSearchType)types
+             andHandler:(AppleMusicSearchRequestHandler)handler
+{
+    MPI_ASSERT_DEV_TOKEN;
+    NSAssert(phrase.length > 0, @"Empty or nil search phrase");
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createSearchRequestWithPhrase:phrase
+                                                                         forStorefront:storefront
+                                                                          localization:localization
+                                                                                 limit:limit
+                                                                                offset:offset
+                                                                                 types:types
+                                                                        developerToken:self.developerToken];
+    
+    return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
+        if (handler) {
+            if (error) {
+                handler(error, nil);
+            } else {
+                MPIAppleMusicSearchResponse *response = [self _parsedJSON:result toModelForClass:[MPIAppleMusicSearchResponse class] withError:&error];
+                handler(error, response);
+            }
+        }
+    }];
+}
+
+
+#pragma mark Recommendations
+- (NSOperation *)getRecommendationsWithHandler:(AppleMusicRecommendationsRequestHandler)handler
+{
+    MPI_ASSERT_DEV_TOKEN;
+    MPI_ASSERT_USR_TOKEN;
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetRecommendationsRequestWithDeveloperToken:self.developerToken andUserToken:self.userToken];
+    return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
+        
     }];
 }
 

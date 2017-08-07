@@ -52,5 +52,11 @@ static NSString *const kDevToken = @"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI
     XCTAssertNotNil(request.URL);
 }
 
+- (void)testCreateSearchForJamesBrown
+{
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createSearchRequestWithPhrase:@"James Brown" forStorefront:@"us" localization:nil limit:@2 offset:nil types:MPIAppleMusicSearchTypeArtists|MPIAppleMusicSearchTypeAlbums developerToken:kDevToken];
+    XCTAssertNotNil(request);
+    XCTAssertNotNil(request.URL);
+}
 
 @end
