@@ -1,21 +1,21 @@
 //
-//  MPIRequestsFactoryTest.m
+//  MPIAppleMusicStorefrontsRequestsTest.m
 //  MusicaKit_Tests
 //
-//  Created by Adam Rozynski (micropixels) on 23/07/2017.
+//  Created by rurza on 09/08/2017.
 //  Copyright © 2017 rurza. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
+#import "DeveloperKey.h"
 @import MusicaKit;
 
-static NSString *const kDevToken = @"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjMyNzlIOTY2QTYifQ.eyJpc3MiOiJGNTg3NzJHNjdKIiwiaWF0IjoxNTAwOTE4MjI3LCJleHAiOjE1MDM1MTAyMjd9.xeSwB_rzRXCOZLRqwIF0M6yoTXvOP8SnIl6pvc-x7CGAfaB3hTImeFk7Cw1-hVMll26VyshJsZmG3UTfPT8oIw";
-
-@interface MPIRequestsFactoryTest : XCTestCase
+@interface MPIAppleMusicStorefrontsRequestsTest : XCTestCase
 
 @end
 
-@implementation MPIRequestsFactoryTest
+@implementation MPIAppleMusicStorefrontsRequestsTest
+
 
 - (void)testCreateStorefrontRequest
 {
@@ -37,7 +37,7 @@ static NSString *const kDevToken = @"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI
 
 - (void)testCreateStorefrontForUserRequest
 {
-    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetUserStorefrontRequestWithUserToken:@"aro" developerToken:@"123"];
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetUserStorefrontRequestWithDeveloperToken:@"123" userToken:@"aro"];
     XCTAssertNotNil(request);
     XCTAssertNotNil(request.URL);
     NSDictionary *headers = request.allHTTPHeaderFields;
@@ -45,18 +45,12 @@ static NSString *const kDevToken = @"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI
     XCTAssertNotNil([headers objectForKey:@"Music-User-Token"]);
 }
 
-- (void)testCreateGetAlbumsRequest
+- (void)testCreateGetMultipleStorefrontsRequest
 {
-    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetAlbumsRequestWithAlbumIDs:@[@19842306] forStorefront:@"us" developerToken:kDevToken];
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetMultipleStorefrontsRequestWithRegionCodes:@[@"PL", @"US"] developerToken:kDevToken];
     XCTAssertNotNil(request);
     XCTAssertNotNil(request.URL);
+    NSDictionary *headers = request.allHTTPHeaderFields;
+    XCTAssertNotNil([headers objectForKey:@"Authorization"]);
 }
-
-- (void)testCreateSearchForJamesBrown
-{
-    NSURLRequest *request = [MPIAppleMusicRequestFactory createSearchRequestWithPhrase:@"James Brown" forStorefront:@"us" localization:nil limit:@2 offset:nil types:MPIAppleMusicSearchTypeArtists|MPIAppleMusicSearchTypeAlbums developerToken:kDevToken];
-    XCTAssertNotNil(request);
-    XCTAssertNotNil(request.URL);
-}
-
 @end

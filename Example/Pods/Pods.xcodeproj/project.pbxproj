@@ -68,7 +68,7 @@
 		5B8609121F28EDAD003997EB /* MPIAppleMusicStorefrontResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8609081F28ED04003997EB /* MPIAppleMusicStorefrontResponse.m */; };
 		5B8609181F292CEA003997EB /* MPIAppleMusicError.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B8609161F292CEA003997EB /* MPIAppleMusicError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B8609191F292CEA003997EB /* MPIAppleMusicError.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8609171F292CEA003997EB /* MPIAppleMusicError.m */; };
-		5BB844F01F37A62600BBAD1A /* MPIAppleMusicSearchType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BB844EF1F37A62600BBAD1A /* MPIAppleMusicSearchType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BB844F01F37A62600BBAD1A /* MPIAppleMusicResourceType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BB844EF1F37A62600BBAD1A /* MPIAppleMusicResourceType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BC240631F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC240611F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BC240641F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC240621F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.m */; };
 		5BC240691F2A51AC00679F44 /* MPIAppleMusicRelationship.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC240671F2A51AC00679F44 /* MPIAppleMusicRelationship.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -233,7 +233,7 @@
 		5B86090C1F28ED30003997EB /* MPIAppleMusicStorefrontResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicStorefrontResource.m; sourceTree = "<group>"; };
 		5B8609161F292CEA003997EB /* MPIAppleMusicError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicError.h; sourceTree = "<group>"; };
 		5B8609171F292CEA003997EB /* MPIAppleMusicError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicError.m; sourceTree = "<group>"; };
-		5BB844EF1F37A62600BBAD1A /* MPIAppleMusicSearchType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicSearchType.h; sourceTree = "<group>"; };
+		5BB844EF1F37A62600BBAD1A /* MPIAppleMusicResourceType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicResourceType.h; sourceTree = "<group>"; };
 		5BC240611F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicAlbumResponse.h; sourceTree = "<group>"; };
 		5BC240621F2A4F4E00679F44 /* MPIAppleMusicAlbumResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPIAppleMusicAlbumResponse.m; sourceTree = "<group>"; };
 		5BC240671F2A51AC00679F44 /* MPIAppleMusicRelationship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPIAppleMusicRelationship.h; sourceTree = "<group>"; };
@@ -784,7 +784,7 @@
 				4B6E4342780EE98D132CC28AD4B04E67 /* MPIAppleMusicRequestFactory.m */,
 				4287AA12EC0CAD873667AFF6C0F215D2 /* MPIAsyncBlockOperation.h */,
 				312CEB6CA6EC129B287B11C25A9AEB58 /* MPIAsyncBlockOperation.m */,
-				5BB844EF1F37A62600BBAD1A /* MPIAppleMusicSearchType.h */,
+				5BB844EF1F37A62600BBAD1A /* MPIAppleMusicResourceType.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -876,7 +876,7 @@
 				770F408943774F1BECE83EDF54C184CA /* NSURLRequest+HttpMethod.h in Headers */,
 				5BC7DB521F3263F60006D46A /* MPIAppleMusicCuratorRelationship.h in Headers */,
 				5B347A951F38E485007CA2FE /* MPIAppleMusicSearchResults.h in Headers */,
-				5BB844F01F37A62600BBAD1A /* MPIAppleMusicSearchType.h in Headers */,
+				5BB844F01F37A62600BBAD1A /* MPIAppleMusicResourceType.h in Headers */,
 				5BC7DB171F2BC3F00006D46A /* MPIAppleMusicTrackResource.h in Headers */,
 				5BC7DB391F325D160006D46A /* MPIAppleMusicRecommendationRelationships.h in Headers */,
 				5BC7DB2B1F321B570006D46A /* MPIAppleMusicGenre.h in Headers */,

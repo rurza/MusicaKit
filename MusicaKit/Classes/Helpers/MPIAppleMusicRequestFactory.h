@@ -7,18 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MPIAppleMusicSearchType.h"
+#import "MPIAppleMusicResourceType.h"
 
 @interface MPIAppleMusicRequestFactory : NSObject
 
-//Storefront
-+ (NSURLRequest *)createGetAllStorefrontsRequestsWithDeveloperToken:(NSString *)devToken;
+#pragma mark Storefronts
 + (NSURLRequest *)createGetStorefrontRequestForRegionCode:(NSString *)regionCode developerToken:(NSString *)devToken;
-+ (NSURLRequest *)createGetUserStorefrontRequestWithUserToken:(NSString *)usrToken developerToken:(NSString *)devToken;
++ (NSURLRequest *)createGetMultipleStorefrontsRequestWithRegionCodes:(NSArray<NSString *> *)regionCodes developerToken:(NSString *)devToken;
++ (NSURLRequest *)createGetUserStorefrontRequestWithDeveloperToken:(NSString *)devToken userToken:(NSString *)usrToken;
++ (NSURLRequest *)createGetAllStorefrontsRequestsWithDeveloperToken:(NSString *)devToken;
 
-//Albums
-+ (NSURLRequest *)createGetAlbumsRequestWithAlbumIDs:(NSArray<NSNumber *> *)ids forStorefront:(NSString *)storefront developerToken:(NSString *)devToken;
-+ (NSURLRequest *)createGetAlbumRequestWithAlbumID:(NSNumber *)id forStorefront:(NSString *)storefront developerToken:(NSString *)devToken;
+#pragma mark Albums
++ (NSURLRequest *)createGetAlbumsRequestWithAlbumIDs:(NSArray<NSNumber *> *)ids
+                                       forStorefront:(NSString *)storefront
+                                        localization:(NSString *)localization
+                                        includeTypes:(MPIAppleMusicResourceType)types
+                                      developerToken:(NSString *)devToken;
+
 
 #pragma mark Search
 + (NSURLRequest *)createSearchRequestWithPhrase:(NSString *)phrase
@@ -26,9 +31,12 @@
                                    localization:(NSString *)localization
                                           limit:(NSNumber *)limit
                                          offset:(NSNumber *)offset
-                                          types:(MPIAppleMusicSearchType)searchTypes
+                                          types:(MPIAppleMusicResourceType)searchTypes
                                  developerToken:(NSString *)devToken;
 
 #pragma mark Recommendation
 + (NSURLRequest *)createGetRecommendationsRequestWithDeveloperToken:(NSString *)devToken andUserToken:(NSString *)usrToken;
++ (NSURLRequest *)createGetAlbumRecommendationsRequestWithDeveloperToken:(NSString *)devToken andUserToken:(NSString *)usrToken;
++ (NSURLRequest *)createGetPlaylistRecommendationsRequestWithDeveloperToken:(NSString *)devToken andUserToken:(NSString *)usrToken;
+
 @end

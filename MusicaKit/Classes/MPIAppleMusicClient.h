@@ -13,7 +13,7 @@
 @class MPIAppleMusicRecommendationResponse;
 @class MPIAppleMusicSearchResponse;
 
-#import "MPIAppleMusicSearchType.h"
+#import "MPIAppleMusicResourceType.h"
 
 
 typedef void(^NetworkRequestHandler)(NSError *error, id result);
@@ -30,22 +30,41 @@ typedef void(^AppleMusicSearchRequestHandler)(NSError *error, MPIAppleMusicSearc
 @property (nonatomic)           NSString            *developerToken;
 @property (nonatomic)           NSString            *userToken;
 @property (nonatomic, readonly) NSOperationQueue    *operationQueue;
+@property (nonatomic)           NSString            *storefront;
+@property (nonatomic)           NSString            *localization;
 
 + (instancetype)sharedClient;
+
+
+//Storefronts
 - (NSOperation *)getStorefrontForRegionWithCode:(NSString *)regionCode
                                     withHandler:(AppleMusicStorefrontRequestHandler)handler;
+
+- (NSOperation *)getStorefrontsForRegionCodes:(NSArray<NSString *> *)regionCodes
+                                  withHandler:(AppleMusicStorefrontRequestHandler)handler;
+
+- (NSOperation *)getUserStorefrontWithHandler:(AppleMusicStorefrontRequestHandler)handler;
+
+- (NSOperation *)getAllStorefrontsWithHandler:(AppleMusicStorefrontRequestHandler)handler;
 
 
 //Albums
 - (NSOperation *)getAlbumsWithIDs:(NSArray<NSNumber *> *)ids
                     forStorefront:(NSString *)storefront
+                     localization:(NSString *)localization
+                     includeTypes:(MPIAppleMusicResourceType)types
                       withHandler:(AppleMusicAlbumsRequestHandler)handler;
 
-- (NSOperation *)getAlbumWithID:(NSNumber *)storeId
+- (NSOperation *)getAlbumWithID:(NSNumber *)albumId
                   forStorefront:(NSString *)storefront
+                   localization:(NSString *)localization
+                   includeTypes:(MPIAppleMusicResourceType)types
                     withHandler:(AppleMusicAlbumsRequestHandler)handler;
 
 //Recommendations
+- (NSOperation *)getRecommendationsWithHandler:(AppleMusicRecommendationsRequestHandler)handler;
+- (NSOperation *)getAlbumRecommendationsWithHandler:(AppleMusicRecommendationsRequestHandler)handler;
+- (NSOperation *)getPlaylistRecommendationsWithHandler:(AppleMusicRecommendationsRequestHandler)handler;
 
 //Search
 - (NSOperation *)search:(NSString *)phrase
@@ -53,7 +72,7 @@ typedef void(^AppleMusicSearchRequestHandler)(NSError *error, MPIAppleMusicSearc
        withLocalization:(NSString *)localization
                   limit:(NSNumber *)limit
                  offset:(NSNumber *)offset
-                  types:(MPIAppleMusicSearchType)types
+                  types:(MPIAppleMusicResourceType)types
              andHandler:(AppleMusicSearchRequestHandler)handler;
 
 @end

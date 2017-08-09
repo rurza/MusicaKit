@@ -53,41 +53,100 @@
     MPI_ASSERT_DEV_TOKEN;
     NSURLRequest *request = [MPIAppleMusicRequestFactory createGetStorefrontRequestForRegionCode:regionCode developerToken:self.developerToken];
     return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id json) {
-        if (handler) {
-            if (error) {
-                handler(error, nil);
-            } else {
-                MPIAppleMusicStorefrontResponse *response = [self _parsedJSON:json toModelForClass:[MPIAppleMusicStorefrontResponse class] withError:&error];
-                handler(error, response);
-            }
-        }
+        [self parseStorefrontResult:json error:error withHandler:handler];
     }];
+}
+
+- (NSOperation *)getStorefrontsForRegionCodes:(NSArray<NSString *> *)regionCodes
+                                  withHandler:(AppleMusicStorefrontRequestHandler)handler
+{
+    MPI_ASSERT_DEV_TOKEN;
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetMultipleStorefrontsRequestWithRegionCodes:regionCodes developerToken:self.developerToken];
+    return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
+        [self parseStorefrontResult:result error:error withHandler:handler];
+    }];
+}
+
+- (NSOperation *)getUserStorefrontWithHandler:(AppleMusicStorefrontRequestHandler)handler
+{
+    MPI_ASSERT_DEV_TOKEN;
+    MPI_ASSERT_USR_TOKEN;
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetUserStorefrontRequestWithDeveloperToken:self.developerToken userToken:self.userToken];
+    return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
+        [self parseStorefrontResult:result error:error withHandler:handler];
+    }];
+}
+
+- (NSOperation *)getAllStorefrontsWithHandler:(AppleMusicStorefrontRequestHandler)handler
+{
+    MPI_ASSERT_DEV_TOKEN;
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetAllStorefrontsRequestsWithDeveloperToken:self.developerToken];
+    return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
+        [self parseStorefrontResult:result error:error withHandler:handler];
+    }];
+}
+
+- (void)parseStorefrontResult:(id)result error:(NSError *)error withHandler:(AppleMusicStorefrontRequestHandler)handler
+{
+    [self parseResult:result forClass:[MPIAppleMusicStorefrontResponse class] error:error withHandler:handler];
 }
 
 
 #pragma mark Albums
-- (NSOperation *)getAlbumsWithIDs:(NSArray<NSNumber *> *)ids forStorefront:(NSString *)storefront withHandler:(AppleMusicAlbumsRequestHandler)handler
+- (NSOperation *)getAlbumsWithIDs:(NSArray<NSNumber *> *)ids
+                    forStorefront:(NSString *)storefront
+                     localization:(NSString *)localization
+                     includeTypes:(MPIAppleMusicResourceType)types
+                      withHandler:(AppleMusicAlbumsRequestHandler)handler
 {
     MPI_ASSERT_DEV_TOKEN;
     MPI_ASSERT_STOREFRONT;
-    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetAlbumsRequestWithAlbumIDs:ids forStorefront:storefront developerToken:self.developerToken];
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetAlbumsRequestWithAlbumIDs:ids forStorefront:storefront localization:localization includeTypes:types developerToken:self.developerToken];
     return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
-        if (handler) {
-            if (error) {
-                handler(error, nil);
-            } else {
-                MPIAppleMusicAlbumResponse *response = [self _parsedJSON:result toModelForClass:[MPIAppleMusicAlbumResponse class] withError:&error];
-                handler(error, response);
-            }
-        }
+        [self parseResult:result forClass:[MPIAppleMusicAlbumResponse class] error:error withHandler:handler];
     }];
 }
 
-- (NSOperation *)getAlbumWithID:(NSNumber *)storeId
+- (NSOperation *)getAlbumWithID:(NSNumber *)albumId
                   forStorefront:(NSString *)storefront
+                   localization:(NSString *)localization
+                   includeTypes:(MPIAppleMusicResourceType)types
                     withHandler:(AppleMusicAlbumsRequestHandler)handler
 {
-    return [self getAlbumsWithIDs:@[storeId] forStorefront:storefront withHandler:handler];
+    return [self getAlbumsWithIDs:@[albumId] forStorefront:storefront localization:localization includeTypes:types withHandler:handler];
+}
+
+
+
+#pragma mark Recommendations
+- (NSOperation *)getRecommendationsWithHandler:(AppleMusicRecommendationsRequestHandler)handler
+{
+    MPI_ASSERT_DEV_TOKEN;
+    MPI_ASSERT_USR_TOKEN;
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetRecommendationsRequestWithDeveloperToken:self.developerToken andUserToken:self.userToken];
+    return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
+        [self parseResult:result forClass:[MPIAppleMusicRecommendationResponse class] error:error withHandler:handler];
+    }];
+}
+
+- (NSOperation *)getAlbumRecommendationsWithHandler:(AppleMusicRecommendationsRequestHandler)handler
+{
+    MPI_ASSERT_DEV_TOKEN;
+    MPI_ASSERT_USR_TOKEN;
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetAlbumRecommendationsRequestWithDeveloperToken:self.developerToken andUserToken:self.userToken];
+    return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
+        [self parseResult:result forClass:[MPIAppleMusicRecommendationResponse class] error:error withHandler:handler];
+    }];
+}
+
+- (NSOperation *)getPlaylistRecommendationsWithHandler:(AppleMusicRecommendationsRequestHandler)handler
+{
+    MPI_ASSERT_DEV_TOKEN;
+    MPI_ASSERT_USR_TOKEN;
+    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetPlaylistRecommendationsRequestWithDeveloperToken:self.developerToken andUserToken:self.userToken];
+    return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
+        [self parseResult:result forClass:[MPIAppleMusicRecommendationResponse class] error:error withHandler:handler];
+    }];
 }
 
 #pragma mark Search
@@ -96,7 +155,7 @@
        withLocalization:(NSString *)localization
                   limit:(NSNumber *)limit
                  offset:(NSNumber *)offset
-                  types:(MPIAppleMusicSearchType)types
+                  types:(MPIAppleMusicResourceType)types
              andHandler:(AppleMusicSearchRequestHandler)handler
 {
     MPI_ASSERT_DEV_TOKEN;
@@ -110,29 +169,30 @@
                                                                         developerToken:self.developerToken];
     
     return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
-        if (handler) {
-            if (error) {
-                handler(error, nil);
-            } else {
-                MPIAppleMusicSearchResponse *response = [self _parsedJSON:result toModelForClass:[MPIAppleMusicSearchResponse class] withError:&error];
-                handler(error, response);
-            }
-        }
+        [self parseResult:result forClass:[MPIAppleMusicSearchResponse class] error:error withHandler:handler];
     }];
 }
 
 
-#pragma mark Recommendations
-- (NSOperation *)getRecommendationsWithHandler:(AppleMusicRecommendationsRequestHandler)handler
+
+- (void)parseResult:(id)result forClass:(Class)class error:(NSError *)error withHandler:(NetworkRequestHandler)handler
 {
-    MPI_ASSERT_DEV_TOKEN;
-    MPI_ASSERT_USR_TOKEN;
-    NSURLRequest *request = [MPIAppleMusicRequestFactory createGetRecommendationsRequestWithDeveloperToken:self.developerToken andUserToken:self.userToken];
-    return [self _networkOperationWithRequest:request withHandler:^(NSError *error, id result) {
-        
-    }];
+    if (handler) {
+        if (error) {
+            handler(error, nil);
+        } else {
+            id response = [self _parsedJSON:result toModelForClass:class withError:&error];
+            handler(error, response);
+        }
+    }
 }
 
+
+
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 #pragma mark – Private
 - (NSOperation *)_networkOperationWithRequest:(NSURLRequest *)request
                                          withHandler:(NetworkRequestHandler)handler

@@ -34,7 +34,8 @@ static NSString *const kDevKey = @"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6I
     XCTestExpectation *expectation = [self expectationWithDescription:@"GetAlbum"];
     MPIAppleMusicClient *client = [MPIAppleMusicClient sharedClient];
     client.developerToken = kDevKey;
-    [client getAlbumsWithIDs:@[@19842306] forStorefront:@"us" withHandler:^(NSError *error, MPIAppleMusicAlbumResponse *response) {
+
+    [client getAlbumsWithIDs:@[@19842306] forStorefront:@"us" localization:nil includeTypes:MPIAppleMusicResourceTypeAll withHandler:^(NSError *error, MPIAppleMusicAlbumResponse *response) {
         [expectation fulfill];
     }];
     [self waitForExpectations:@[expectation] timeout:15];
