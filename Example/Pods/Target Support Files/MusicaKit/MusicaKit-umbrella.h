@@ -20,6 +20,8 @@
 #import "MPIAppleMusicRecommendationResponse.h"
 #import "MPIAppleMusicStorefrontResponse.h"
 #import "MPIAppleMusicTrackResponse.h"
+#import "MPIAppleMusicMusicVideoResponse.h"
+#import "MPIAppleMusicSearchResponse.h"
 
 #import "MPIAppleMusicArtist.h"
 #import "MPIAppleMusicAlbum.h"
@@ -32,15 +34,23 @@
 #import "MPIAppleMusicRecommendation.h"
 #import "MPIAppleMusicStorefront.h"
 #import "MPIAppleMusicTrack.h"
+#import "MPIAppleMusicMusicVideo.h"
 
 #import "MPIAppleMusicArtistRelationship.h"
 #import "MPIAppleMusicCuratorRelationship.h"
 #import "MPIAppleMusicPlaylistRelationship.h"
 #import "MPIAppleMusicRecommendationRelationship.h"
 #import "MPIAppleMusicTrackRelationship.h"
+#import "MPIAppleMusicAlbumRelationship.h"
+#import "MPIAppleMusicGenreRelationship.h"
 
+#import "MPIAppleMusicAlbumRelationships.h"
+#import "MPIAppleMusicCuratorRelationships.h"
+#import "MPIAppleMusicMusicVideoRelationships.h"
+#import "MPIAppleMusicPlaylistRelationships.h"
+
+#import "MPIAppleMusicSearchResults.h"
 
 
 FOUNDATION_EXPORT double MusicaKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char MusicaKitVersionString[];
-
