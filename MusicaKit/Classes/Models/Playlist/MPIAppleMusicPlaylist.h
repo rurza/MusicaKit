@@ -34,7 +34,7 @@
 /**
  (Optional) The date the playlist was last modified.
  */
-@property (nonatomic) NSDate<Optional>                                        *lastModifiedDate;
+@property (nonatomic) NSDate<Optional>                              *lastModifiedDate;
 
 /**
  The localized name of the playlist.

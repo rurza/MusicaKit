@@ -31,7 +31,7 @@
 /**
  A URL subpath that fetches the resource as the primary object. This member is only present in responses.
  */
-@property (nonatomic) NSString                                  *href;
+@property (nonatomic) NSString<Optional>                        *href;
 
 /**
  The type of resource. This member is required.

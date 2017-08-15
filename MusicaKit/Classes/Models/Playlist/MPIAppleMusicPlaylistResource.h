@@ -14,7 +14,7 @@
 
 @interface MPIAppleMusicPlaylistResource : MPIAppleMusicResource
 
-@property (nonatomic) MPIAppleMusicPlaylist<Optional>                       *attributes;
+@property (nonatomic) MPIAppleMusicPlaylist                                 *attributes;
 @property (nonatomic) MPIAppleMusicPlaylistRelationships<Optional>          *relationships;
 
 @end

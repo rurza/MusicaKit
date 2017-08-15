@@ -10,5 +10,5 @@
 #import "MPIAppleMusicRecommendationResource.h"
 
 @interface MPIAppleMusicRecommendationResponse : MPIAppleMusicResponse
-@property (nonatomic) NSArray<MPIAppleMusicRecommendationResource>  *data;
+@property (nonatomic) NSArray<MPIAppleMusicRecommendationResource *><MPIAppleMusicRecommendationResource>  *data;
 @end

@@ -8,16 +8,17 @@
 
 #import "MPIAppleMusicRecommendationRelationships.h"
 #import "MPIAppleMusicPlaylistRelationship.h"
-#import "MPIAppleMusicRecommendationRelationship.h"
+#import "MPIAppleMusicAlbumRelationship.h"
 
 @implementation MPIAppleMusicRecommendationRelationships
 
 - (void)setContentsWithNSDictionary:(NSDictionary *)dictionary
 {
     NSError *error;
-    id result = [[MPIAppleMusicPlaylistRelationship alloc] initWithDictionary:dictionary error:&error];
-    if (error) {
-        result = [[MPIAppleMusicRecommendationRelationship alloc] initWithDictionary:dictionary error:nil];
+    id result;
+    result = [[MPIAppleMusicPlaylistRelationship alloc] initWithDictionary:dictionary error:&error];
+    if (error) {//|| ![((MPIAppleMusicPlaylistRelationship *)result).data.firstObject attributes]
+        result = [[MPIAppleMusicAlbumRelationship alloc] initWithDictionary:dictionary error:nil];
     }
     self.contents = result;
 }
